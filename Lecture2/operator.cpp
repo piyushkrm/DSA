@@ -33,5 +33,16 @@ int main() {
     std::cout << "Is less than: " << (isLessThan? "True" : "False") << std::endl;
     std::cout << "Is greater than or equal to: " << (isGreaterThanOrEqual? "True": "False") << std::endl;
 
+
+    // Logical operators
+    bool isNoEqual = (10 != 10);
+    bool OR = (10 == 10) ||  (45 == 48);
+    bool AND = (50 == 60) && (10 == 10);
+
+    std::cout << "Is Not Equal : " << (isNoEqual ? "True" : "False") << std::endl;
+    std::cout << "OR : " << (OR? "True" : "False") << std::endl;
+    std::cout << "AND : " << (AND? "True" : "False") << std::endl;
+
+
     return 0;
 }
