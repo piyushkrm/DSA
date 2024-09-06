@@ -18,5 +18,20 @@ int main() {
     std::cout << "Quotient: " << quotient << std::endl;
     std::cout << "Remainder: " << remainder << std::endl;
 
+
+    // Relational operations
+    bool isEqual = (a == b);
+    bool isNotEqual = (a!= b);
+    bool isGreaterThan = (a > b);
+    bool isLessThan = (a < b);
+    bool isGreaterThanOrEqual = (a >= b);
+    bool isLessThanOrEqual = (a <= b);
+    // Output the results
+    std::cout << "Is equal: " << (isEqual? "True" : "False") << std::endl;
+    std::cout << "Is not equal: " << (isNotEqual? "True" : "False") << std::endl;
+    std::cout << "Is greater than: " << (isGreaterThan? "True" : "False") << std::endl;
+    std::cout << "Is less than: " << (isLessThan? "True" : "False") << std::endl;
+    std::cout << "Is greater than or equal to: " << (isGreaterThanOrEqual? "True": "False") << std::endl;
+
     return 0;
 }
