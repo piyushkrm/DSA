@@ -20,5 +20,12 @@ int main() {
 
 
 
+    // Booleans
+    bool isStudent = true;
+    cout << "Is Student : " << (isStudent? "Yes" : "No") << endl;
+    // print the size of booleans(1)
+    cout << sizeof(isStudent) << endl;
+
+
     return 0;
 }
