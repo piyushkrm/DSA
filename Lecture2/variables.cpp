@@ -27,5 +27,12 @@ int main() {
     cout << sizeof(isStudent) << endl;
 
 
+    // Double
+    double e = 2.71828;
+    cout << "E : " << e << endl;
+    // print the size of doubles(8)
+    cout << sizeof(e) << endl;
+
+
     return 0;
 }
