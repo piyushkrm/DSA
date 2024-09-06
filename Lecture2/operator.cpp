@@ -43,6 +43,5 @@ int main() {
     std::cout << "OR : " << (OR? "True" : "False") << std::endl;
     std::cout << "AND : " << (AND? "True" : "False") << std::endl;
 
-
     return 0;
 }
