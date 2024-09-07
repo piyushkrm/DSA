@@ -11,6 +11,14 @@ int main() {
     for (int i = 1; i <= n; i++) {
         sum += i;
     }
+
+    // Using while loop
+    int i = 1;
+    while (i <= n) {
+        sum += i;
+        i++;
+    }
     cout << "Sum of numbers from 1 to " << n << " is: " << sum << endl;
+    
     return 0;
 }
