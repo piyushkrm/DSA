@@ -13,6 +13,13 @@ int main()
     {
         sum += i;
     }
+
+    // another solution
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 == 1) {
+            sum += i;
+        }
+    }
     cout << "Sum of odd numbers from 1 to " << n << " is: " << sum << endl;
     return 0;
 }
