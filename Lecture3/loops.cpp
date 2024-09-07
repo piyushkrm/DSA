@@ -21,5 +21,10 @@ int main() {
     } while (a <= 10);
     cout << endl;
 
+    // for loop
+    for (int j = 0; j <= 10; j++) {
+        cout << j << " ";
+    }
+    cout << endl;
     return 0;
 }
