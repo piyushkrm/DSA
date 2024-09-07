@@ -12,5 +12,14 @@ int main() {
     }
     cout << endl;
 
+
+    // do-while loop
+    int a = 0;
+    do {
+        cout << a << " ";
+        a++;
+    } while (a <= 10);
+    cout << endl;
+
     return 0;
 }
