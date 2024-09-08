@@ -5,7 +5,9 @@
 using namespace std;    
 
 int main() {
-    int n = 6;
+    int n;
+    cout << "Enter n : ";
+    cin >> n;
 
     for (int i = 0; i < n; i++) {
         // print space
