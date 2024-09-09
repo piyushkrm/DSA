@@ -48,9 +48,25 @@ int main() {
             cout << "* ";
         }
         cout << endl;
+    }
+        // bottom part
+        for (int i = 0; i < k - 1; i++) {
+            // space
+            for (int j = 0; j < i + 1; j++) {
+                cout << "  ";
+            }
 
+            cout << "* ";
 
+            if(i != k - 2) {
+                // space
+                for(int j = 0; j < 2*(k - i) - k; j++) {
+                    cout << "  ";
+                }
 
+                cout << "* ";
+            }
+            cout << endl;
         
     }
 
