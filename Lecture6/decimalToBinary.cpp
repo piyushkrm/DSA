@@ -23,10 +23,15 @@ int binaryToDecimal(int decimal) {
 }
 
 int main(){
-    int decimal;
-    cout << "Enter decimal number : ";
-    cin >> decimal;
-    cout << "Binary equivalent of " << decimal << " is: " << binaryToDecimal(decimal) << endl;
+    // int decimal;
+    // cout << "Enter decimal number : ";
+    // cin >> decimal;
+    // cout << "Binary equivalent of " << decimal << " is: " << binaryToDecimal(decimal) << endl;
+    
+    // calculate from 1 to 10;
+    for(int i = 1; i <= 10; i++){
+        cout << "Binary equivalent of " << i << " is: " << binaryToDecimal(i) << endl;
+    }
     
     return 0;
 }
