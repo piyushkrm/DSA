@@ -9,9 +9,9 @@ int main() {
     int a = 4;
     int b = 8;
     // bitwise & operator
-    int result = a & b;
-    cout << result;
+    cout << (a & b) << endl;
 
     // bitwise | operator
-    
+    cout << (a | b) << endl;
+
 }
