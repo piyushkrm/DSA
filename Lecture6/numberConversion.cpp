@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+// decimal to binary conversion
 int decimalToBinary(int decimal) {
 
     int answer = 0;
@@ -22,6 +23,7 @@ int decimalToBinary(int decimal) {
     return answer;
 }
 
+// Binary to decimal conversion
 int binaryToDecimal(int binary) {
     int answer = 0;
     int power = 1;
