@@ -14,4 +14,6 @@ int main() {
     // bitwise | operator
     cout << (a | b) << endl;
 
+    // bitwise ^ operator
+    cout << (a ^ b) << endl;
 }
