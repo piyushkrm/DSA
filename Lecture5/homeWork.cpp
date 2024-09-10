@@ -34,15 +34,38 @@ using namespace std;
         }
     }
 
+
+// Question3:
+    int fibonacci(int n){
+        if(n <= 1){
+            return n;
+        }
+        int fib[n+1];
+        fib[0] = 0;
+        fib[1] = 1;
+
+        for (int i = 2; i <= n; i++){
+            fib[i] = fib[i-1] + fib[i-2];
+        }
+        return fib[n];
+    }
+
+
 int main(){
     // Question1
     int num;
-    // cout << "Enter the number to check number is prime or not : ";
-    // cin >> num;
-    // cout << "Is " << num << " prime? " << (isPrime(num) ? "Yes" : "No") << endl;
+    cout << "Enter the number to check number is prime or not : ";
+    cin >> num;
+    cout << "Is " << num << " prime? " << (isPrime(num) ? "Yes" : "No") << endl;
 
     // Question2
     cout << "Enter the number to print prime numbers from 2 to N : ";
     cin >> num;
     printPrime(num);
+
+    // Question3
+    int n;
+    cout << "Enter the value of n for the nth Fibonacci series: ";
+    cin >> n;
+    cout << "The " << n << "th Fibonacci number is: " << fibonacci(n) << endl;
 }
