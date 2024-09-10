@@ -35,10 +35,8 @@ int sumOfDigits(int N) {
     return sum;
 }
 
-// Qs4. Calculate nCr binomial 
-// formula of nCr : (n! / (r! * (n-r)!))
-
-// factorial of n
+// Qs4. Calculate nCr binomial >> formula of nCr : (n! / (r! * (n-r)!))
+// factorial of n, r and (n-r)
 int fact(int x) {
     if (x == 0 || x == 1) {
         return 1;
@@ -55,20 +53,20 @@ int nCr(int n, int r) {
 }
 
 int main() {
-    // int num1;
-    // cout << "Enter number to calculate sum from 1 : ";
-    // cin >> num1;
-    // cout << "Sum of numbers from 1 to " << num1 << " are : " << calSum(num1);
+    int num1;
+    cout << "Enter number to calculate sum from 1 : ";
+    cin >> num1;
+    cout << "Sum of numbers from 1 to " << num1 << " are : " << calSum(num1);
 
-    // int num2;
-    // cout << "\nEnter number to calculate factorial : ";
-    // cin >> num2;
-    // cout << "Factorial of " << num2 << " is : " << factorial(num2);
+    int num2;
+    cout << "\nEnter number to calculate factorial : ";
+    cin >> num2;
+    cout << "Factorial of " << num2 << " is : " << factorial(num2);
 
-    // int num3;
-    // cout << "\nEnter number to calculate sum of digits : ";
-    // cin >> num3;
-    // cout << "Sum of digits of " << num3 << " is : " << sumOfDigits(num3);
+    int num3;
+    cout << "\nEnter number to calculate sum of digits : ";
+    cin >> num3;
+    cout << "Sum of digits of " << num3 << " is : " << sumOfDigits(num3);
     
     int n, r;
     cout << "\nEnter n for nCr binomial : ";
@@ -77,5 +75,4 @@ int main() {
     cin >> r;
     cout << "nCr(" << n << "," << r << ") is : " << nCr(n, r);
 
-    
 }
