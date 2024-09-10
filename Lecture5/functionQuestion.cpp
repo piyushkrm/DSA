@@ -25,6 +25,16 @@ int factorial(int N) {
     return fact;
 }
 
+// Qs3. Calculate the sum of the digits of a number
+int sumOfDigits(int N) {
+    int sum = 0;
+    while (N > 0) {
+        sum += N % 10;
+        N /= 10;
+    }
+    return sum;
+}
+
 int main() {
     int num1;
     cout << "Enter number to calculate sum from 1 : ";
@@ -35,4 +45,9 @@ int main() {
     cout << "\nEnter number to calculate factorial : ";
     cin >> num2;
     cout << "Factorial of " << num2 << " is : " << factorial(num2);
+
+    int num3;
+    cout << "\nEnter number to calculate sum of digits : ";
+    cin >> num3;
+    cout << "Sum of digits of " << num3 << " is : " << sumOfDigits(num3);
 }
