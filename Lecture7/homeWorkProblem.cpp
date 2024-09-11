@@ -57,7 +57,5 @@ int main() {
     int n = 34;
     isPowerOf2(n);
 
-
     return 0;
-
 }
