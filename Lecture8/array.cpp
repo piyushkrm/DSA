@@ -3,6 +3,7 @@
 // Array DSA Part 1
 
 #include <iostream>
+#include <climits>
 using namespace std;
 
 // array initilization
@@ -60,10 +61,27 @@ int maxMin() {
     return 0;
 }
 
+int minMax() {
+    int arr[5] = {15, 20, 30, 40, 50};
+    int smallest = INT_MAX;
+    int largest = INT_MIN;
+
+    for (int i = 0; i < 5; i++) {
+        smallest = min(arr[i], smallest);
+        largest = max(arr[i], largest);
+    }
+    cout << "Minimum element in the array is : " << smallest << endl;
+    cout << "Minimum element in the array is : " << largest << endl;
+
+    return 0;
+
+}
+
 
 int main()
 {
     // array();
     // arrayInput();
-    maxMin();
+    // maxMin();
+    minMax();
 }
