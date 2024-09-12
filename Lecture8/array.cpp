@@ -77,11 +77,56 @@ int minMax() {
 
 }
 
+// print index of array
+int indexArray() {
+    int array[5] = {15, 20, 250, 40, 50};
+
+    int smallest = 0;
+    int largest = 0;
+
+    for (int i = 0; i < 5; i++) {
+        if (array[i] < array[smallest]) {
+            smallest = i;
+        }
+
+        if (array[i] > array[largest]) {
+            largest = i;
+        }
+    }
+    cout << "Minimum element in the array of index is : " << smallest << endl;
+    cout << "Minimum element in the array of index is : " << largest << endl;
+
+    return 0;
+}
+
+// pass by reference
+int copy(int array[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << "Element at index " << i << " : " << array[i]*3 << endl;
+    }
+    return 0;
+}
+
+int original() {
+    int array[5] = {15, 20, 30, 40, 50};
+    // reference by array
+    copy(array, 5);
+    cout << endl;
+
+    // Original array
+    for (int i = 0; i < 5; i++) {
+        cout << "Element at index " << i << " : " << array[i] << endl;
+    }
+    return 0;
+}
+
 
 int main()
 {
     // array();
     // arrayInput();
     // maxMin();
-    minMax();
+    // minMax();
+    // indexArray();
+    original();
 }
