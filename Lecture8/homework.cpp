@@ -73,6 +73,18 @@ int swapMinMax(int array[], int size) {
 
     }
 
+// Question 4 : WAF to print intersection of 2 array
+
+void arrayIntersection(int array1[], int size1, int array2[], int size2) {
+    for (int i = 0; i < size1; i++) {
+        for (int j = 0; j < size2; j++) {
+            if (array1[i] == array2[j]) {
+                cout << array1[i] << " ";
+                break;
+            }
+        }
+    }
+}
 
 
 int main() {
@@ -101,13 +113,21 @@ int main() {
     // cout << endl;
 
     // Question3
-    int arr1[] = {1, 2, 3, 4, 5};
-    int size1 = sizeof(arr1) / sizeof(arr1[0]);
-    int arr2[] = {2, 3, 8, 9, 5, 10};
-    int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    cout << "Unique elements in array1 and array2: ";
-    arrayUnique(arr1, size1, arr2, size2);
-    cout << endl;
+    // int arr1[] = {1, 2, 3, 4, 5};
+    // int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    // int arr2[] = {2, 3, 8, 9, 5, 10};
+    // int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    // cout << "Unique elements in array1 and array2: ";
+    // arrayUnique(arr1, size1, arr2, size2);
+    // cout << endl;
 
+    // Question4    
+    int arr1[] = {1, 2, 3, 4, 5, 6};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int arr2[] = {4, 5, 6, 7, 8, 9};
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    cout << "Intersection of array1 and array2: ";
+    arrayIntersection(arr1, size1, arr2, size2);
+    cout << endl;
 
 }
