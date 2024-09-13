@@ -42,6 +42,39 @@ int swapMinMax(int array[], int size) {
     return 0;
 }
 
+// Question 3 : WAF to print all the unique valuess in an array.
+    void arrayUnique(int array1[],int size1, int array2[], int size2) {
+
+        for (int i = 0; i < size1; i++) {
+            bool isUnique = true;
+            for (int j = 0; j < size2; j++) {
+                if (array1[i] == array2[j]) {
+                    isUnique = false;
+                    break;
+                }
+            }
+            if (isUnique) {
+                cout << array1[i] << " ";
+            }
+        }
+
+        for (int i = 0; i < size2; i++) {
+            bool isUnique = true;
+            for (int j = 0; j < size1; j++) {
+                if (array2[i] == array1[j]) {
+                    isUnique = false;
+                    break;
+                }
+            }
+            if (isUnique) {
+                cout << array2[i] << " ";
+            }
+        }
+
+    }
+
+
+
 int main() {
 
     // Question1
@@ -51,19 +84,30 @@ int main() {
     // cout << "Product of array elements: " << productOfArray(arr1, size1) << endl;
 
     // Question2
-    int arr2[] = {1, 2, 3, 4, 5, 6};
+    // int arr2[] = {1, 2, 3, 4, 5, 6};
+    // int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    // cout << "Array before swapping min and max: " << endl;
+    // for (int i = 0; i < size2; i++) {
+    //     cout << arr2[i] << " ";
+    // }
+    // cout << endl;
+    // cout << "Min & Max swapped " << endl;
+    // cout << "Array After swapping min and max: "<< endl;
+    // swapMinMax(arr2, size2);
+    // cout << "Array after swapping min and max: " << endl;
+    // for (int i = 0; i < size2; i++) {
+    //     cout << arr2[i] << " ";
+    // }
+    // cout << endl;
+
+    // Question3
+    int arr1[] = {1, 2, 3, 4, 5};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int arr2[] = {2, 3, 8, 9, 5, 10};
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    cout << "Array before swapping min and max: ";
-    for (int i = 0; i < size2; i++) {
-        cout << arr2[i] << " ";
-    }
+    cout << "Unique elements in array1 and array2: ";
+    arrayUnique(arr1, size1, arr2, size2);
     cout << endl;
-    cout << "Min & Max swapped " << endl;
-    cout << "Array After swapping min and max: "<< endl;
-    swapMinMax(arr2, size2);
-    cout << "Array after swapping min and max: " << endl;
-    for (int i = 0; i < size2; i++) {
-        cout << arr2[i] << " ";
-    }
-    cout << endl;
-    }
+
+
+}
