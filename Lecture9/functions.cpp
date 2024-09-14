@@ -19,6 +19,6 @@ int main() {
     vector.pop_back();
     cout << "After pop back, Size of vector: " << vector.size() << endl;
 
-
-
+    // front vector
+    cout << "Front element of vector: " << vector.front() << endl;
 }
