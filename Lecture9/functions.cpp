@@ -11,5 +11,10 @@ int main() {
     // size of a vector
     cout << "Size of vector: " << vector.size() << endl;
 
-    
+    // push_back vector
+    vector.push_back(6);
+    cout << "After push back, Size of vector: " << vector.size() << endl;
+
+
+
 }
