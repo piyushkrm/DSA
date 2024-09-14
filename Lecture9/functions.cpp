@@ -21,4 +21,7 @@ int main() {
 
     // front vector
     cout << "Front element of vector: " << vector.front() << endl;
+
+    // back vector
+    cout << "Back element of vector: " << vector.back() << endl;
 }
