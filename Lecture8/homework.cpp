@@ -90,36 +90,36 @@ void arrayIntersection(int array1[], int size1, int array2[], int size2) {
 int main() {
 
     // Question1
-    // int arr1[] = {1, 2, 3, 4, 5, 6};
-    // int size1 = sizeof(arr1) / sizeof(arr1[0]);
-    // cout << "Sum of array elements: " << sumOfArray(arr1, size1) << endl;
-    // cout << "Product of array elements: " << productOfArray(arr1, size1) << endl;
+    int arr1[] = {1, 2, 3, 4, 5, 6};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    cout << "Sum of array elements: " << sumOfArray(arr1, size1) << endl;
+    cout << "Product of array elements: " << productOfArray(arr1, size1) << endl;
 
     // Question2
-    // int arr2[] = {1, 2, 3, 4, 5, 6};
-    // int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    // cout << "Array before swapping min and max: " << endl;
-    // for (int i = 0; i < size2; i++) {
-    //     cout << arr2[i] << " ";
-    // }
-    // cout << endl;
-    // cout << "Min & Max swapped " << endl;
-    // cout << "Array After swapping min and max: "<< endl;
-    // swapMinMax(arr2, size2);
-    // cout << "Array after swapping min and max: " << endl;
-    // for (int i = 0; i < size2; i++) {
-    //     cout << arr2[i] << " ";
-    // }
-    // cout << endl;
+    int arr2[] = {1, 2, 3, 4, 5, 6};
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    cout << "Array before swapping min and max: " << endl;
+    for (int i = 0; i < size2; i++) {
+        cout << arr2[i] << " ";
+    }
+    cout << endl;
+    cout << "Min & Max swapped " << endl;
+    cout << "Array After swapping min and max: "<< endl;
+    swapMinMax(arr2, size2);
+    cout << "Array after swapping min and max: " << endl;
+    for (int i = 0; i < size2; i++) {
+        cout << arr2[i] << " ";
+    }
+    cout << endl;
 
     // Question3
-    // int arr1[] = {1, 2, 3, 4, 5};
-    // int size1 = sizeof(arr1) / sizeof(arr1[0]);
-    // int arr2[] = {2, 3, 8, 9, 5, 10};
-    // int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    // cout << "Unique elements in array1 and array2: ";
-    // arrayUnique(arr1, size1, arr2, size2);
-    // cout << endl;
+    int arr1[] = {1, 2, 3, 4, 5};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int arr2[] = {2, 3, 8, 9, 5, 10};
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    cout << "Unique elements in array1 and array2: ";
+    arrayUnique(arr1, size1, arr2, size2);
+    cout << endl;
 
     // Question4    
     int arr1[] = {1, 2, 3, 4, 5, 6};
