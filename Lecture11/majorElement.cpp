@@ -55,9 +55,44 @@ int findMajorEle(vector<int> &array) {
     return -1;
 }
 
+// Moore's voting algorithm approach
+
+int findMajority(vector<int> &array) {
+    int frequency = 0;
+    int ans = 0;
+    int size = array.size();
+
+    for (int i = 0; i < size; i++) {
+        if (frequency == 0) {
+            ans = array[i];
+        }
+
+        if (ans == array[i]) {
+            frequency++;
+        } 
+        else {
+            frequency--;
+        }
+    }
+    int count = 0;
+    for (int val : array) {
+        if (val == ans) {
+            count++;
+        }
+    }
+        if (count > size/2) {
+            return ans;
+        }
+        else {
+            return -1;
+    }
+}
+
+
 int main() {
     vector<int> array = {1, 2, 2, 1, 1, 2, 2};
     // cout << findMajorElements(array) << endl;
-    cout << findMajorEle(array) << endl;
+    // cout << findMajorEle(array) << endl;
+    cout << findMajority(array) << endl;
     return 0;
 }
