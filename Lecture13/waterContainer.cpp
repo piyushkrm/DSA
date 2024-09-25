@@ -41,6 +41,9 @@ int maxAreaOptimized(vector<int> &waterCapacity) {
     return maxWater;
 }
 
+// Time Complexity = 0(n)
+
+
 int main() {
     vector<int> height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
     cout << "Maximum water that can be contained is: " << maxArea(height) << endl;
