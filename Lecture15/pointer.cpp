@@ -20,6 +20,27 @@ int pointerArr() {
     cout << "Array pointer " << *arr << endl;
 }
 
+// Pointer Arithmetic Operations 
+int arithmeticOp() {
+    int arr[] = {15, 30, 45, 65, 89, 49};
+    int x = 10;
+    int* ptr = &x;
+    cout << "Pointer arithmetic operation " << *ptr << endl;
+    ptr++;
+    cout << "Pointer increment: " << *ptr << endl;
+    ptr--;
+    cout << "Pointer decrement: " << *ptr << endl;
+    ptr += 2;
+    cout << "Pointer addition: " << *ptr << endl;
+    ptr -= 2;
+    cout << "Pointer subtraction: " << *ptr << endl;
+    ptr = arr + 2;
+    cout << "Pointer addition with array index: " << *ptr << endl;
+    ptr = arr - 2;
+    cout << "Pointer subtraction with array index: " << *ptr << endl;
+    return 0;
+}
+
 
 int main() {
     int a = 10;
@@ -40,4 +61,7 @@ int main() {
 
     // Array Pointer
     pointerArr();
+
+    // Pointer Arithmetic Operations
+    arithmeticOp();
 }
