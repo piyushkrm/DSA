@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Iterative search approach
 int binarySearch(vector<int> arr, int target) {
     int start = 0;
     int end = arr.size() - 1;
