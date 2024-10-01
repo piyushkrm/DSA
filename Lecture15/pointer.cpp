@@ -22,7 +22,7 @@ int pointerArr() {
 
 // Pointer Arithmetic Operations 
 int arithmeticOp() {
-    int arr[] = {15, 30, 45, 65, 89, 49};
+    int arr[] = {15, 30, 45, 65, 89, 49, 59, 20, 60, 89};
     int x = 10;
     int* ptr = &x;
     cout << "Pointer arithmetic operation " << *ptr << endl;
