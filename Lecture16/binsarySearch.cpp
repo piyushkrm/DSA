@@ -50,7 +50,7 @@ int binarySearchRecursive(vector<int> array, int target, int start, int end) {
     return -1; // Target not found in the array
 }
 int main() {
-    vector<int>arr = {-1, 0, 3, 4, 5, 9, 12};
+    vector<int>arr = {-1, 0, 3, 4, 5, 9, 12, 49, 56, 20};
     int target = 12;
     // Output: 6 (index of target in the array)
     cout << "Index of " << target << " is: " << binarySearch(arr, target) << endl;
