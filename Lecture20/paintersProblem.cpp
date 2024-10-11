@@ -58,7 +58,6 @@ int minTimeToPaint(vector<int> &arr, int n, int m) {
 }
 
 int main() {
-
     vector<int> arr = {40, 30, 10, 20};
     int n = 4;
     int m = 2;
