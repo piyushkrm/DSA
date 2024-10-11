@@ -9,13 +9,15 @@
 
 using namespace std;
 
-bool canPaint(vector<int> &min, int n, int m, int maxAllocatedTime) {
+bool canPaint(vector<int> &arr, int n, int m, int maxAllocatedTime) {
     int painter = 1;
     int allocatedTime = 0;
 
     for (int i = 0; i < n; i++) {
         // Check if a single task exceeds the allowed time
         if (arr[i] > maxAllocatedTime) return false;
+
+
         if (allocatedTime + arr[i] <= maxAllocatedTime){
             allocatedTime += arr[i];
         } else {
