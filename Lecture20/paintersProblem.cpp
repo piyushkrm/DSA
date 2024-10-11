@@ -53,4 +53,9 @@ int minTimeToPaint(vector<int> &arr, int n, int m) {
 
 int main() {
 
+    vector<int> arr = {12, 34, 67, 90};
+    int n = 4;
+    int m = 2;
+    cout << "Minimum time required to paint all houses is: " << minTimeToPaint(arr, n, m) << endl;
+    return 0;
 }
