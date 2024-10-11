@@ -14,8 +14,10 @@ bool canPaint(vector<int> &min, int n, int m, int maxAllocatedTime) {
     int allocatedTime = 0;
 
     for (int i = 0; i < n; i++) {
-        if (time + arr[i] <= maxAllocatedTime) {
-            time += arr[i];
+        // Check if a single task exceeds the allowed time
+        if (arr[i] > maxAllocatedTime) return false;
+        if (allocatedTime + arr[i] <= maxAllocatedTime){
+            allocatedTime += arr[i];
         } else {
             painter++;
             allocatedTime = arr[i];
@@ -28,7 +30,7 @@ int minTimeToPaint(vector<int> &arr, int n, int m) {
     int sum = 0;
     int maxVal = INT_MIN;
 
-    // calculate sum of all values
+    // // Calculate sum of all values and find the maximum value in the array
     for (int i = 0; i < n; i++) {
         sum += arr[i];
         maxVal = max(maxVal, arr[i]);
@@ -41,7 +43,7 @@ int minTimeToPaint(vector<int> &arr, int n, int m) {
     while (st <= end) { 
         int mid = (st + end) / 2;
 
-        // Check if it's possible to paint the houses in given time
+       // Check if it's possible to paint the houses in the given time
         if (canPaint(arr, n, m, mid)) {     //left searching
             ans = mid;
             end = mid - 1;  
