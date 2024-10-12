@@ -32,11 +32,11 @@ int searchTarget(vector<int>& nums, int target) {
         }
 
         else if (nums[mid] < target) {
-            start = mid + 1;
+            left = mid + 1;
         }
 
         else {
-            end = mid - 1;
+            right = mid - 1;
         }
     }
     return -1; // target not found in the array
