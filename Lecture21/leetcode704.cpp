@@ -42,3 +42,12 @@ int searchTarget(vector<int>& nums, int target) {
     return -1; // target not found in the array
 }
 
+
+int main() {
+    vector<int> nums = {-1, 0, 3, 5, 9, 12};
+    int target = 9;
+    cout << searchTarget(nums, target) << endl; // Output: 4
+    int target1 = 2;
+    cout << searchTarget(nums, target1) << endl; // Output: -1
+    return 0;
+}
