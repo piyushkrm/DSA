@@ -3,9 +3,11 @@
 // Selection sorting techniques
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void selectionSort(vector<int> &arr, int n) {
+void selectionSort(vector<int>& arr) {
+    int n = arr.size();
     for (int i = 0; i < n; i++) {
         int min_idx = i;
         for (int j = i + 1; j < n; j++) {
@@ -17,15 +19,14 @@ void selectionSort(vector<int> &arr, int n) {
     }
 }
 
-
 int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    vector<int> arr = {64, 34, 25, 12, 22, 11, 90};
+    int n = arr.size();
     cout << "Original array: ";
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
-    selectionSort(arr, n);
+    selectionSort(arr);
     cout << "\nSorted array: ";
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
