@@ -4,11 +4,29 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
+bool isPossible(vector<int>& points, int N, int C, int minAllowedDistance) {
+    int cows = 1;
+    int lastStallPositions = points[0];
+
+    for (int i = 1; i < points.size(); i++) {
+        if (points[i] - lastStallPositions >= minAllowedDistance) {
+            cows++;
+            lastStallPositions = points[i];
+        }
+
+        if (cows == C) {
+            return true;
+        }
+    }
+    return false;
+}
+
 int getDistance(vector<int>& points, int N, int C) {
-    short(points.begin(), points.end());
+    sort(points.begin(), points.end());
 
     int start = 1;
     int end = points[N - 1] - points[0];
@@ -26,24 +44,7 @@ int getDistance(vector<int>& points, int N, int C) {
             end = mid - 1;
         }
     }
-    return -1;
-}
-
-bool isPossible(vector<int>& points, int N, int minAllowedDistance) {
-    int cows = 1;
-    int lastStallPositions = points[0];
-
-    for (int i = 1; i < points.size(); i++) {
-        if (points[i] - lastStallPositions >= minAllowedDistance) {
-            cows++;
-            lastStallPositions = points[i];
-        }
-
-        if (cows == C) {
-            return true;
-        }
-    }
-    return false;
+    return ans;
 }
 
 int main() {
