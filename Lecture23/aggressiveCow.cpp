@@ -30,7 +30,20 @@ int getDistance(vector<int>& points, int N, int C) {
 }
 
 bool isPossible(vector<int>& points, int N, int minAllowedDistance) {
+    int cows = 1;
+    int lastStallPositions = points[0];
 
+    for (int i = 1; i < points.size(); i++) {
+        if (points[i] - lastStallPositions >= minAllowedDistance) {
+            cows++;
+            lastStallPositions = points[i];
+        }
+
+        if (cows == C) {
+            return true;
+        }
+    }
+    return false;
 }
 
 int main() {
