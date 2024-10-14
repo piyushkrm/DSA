@@ -47,5 +47,9 @@ bool isPossible(vector<int>& points, int N, int minAllowedDistance) {
 }
 
 int main() {
-
+    int N = 5;
+    vector<int> points = {1, 2, 4, 8, 9};
+    int C = 3;
+    cout << "Minimum distance between cows: " << getDistance(points, N, C) << endl;
+    return 0;
 }
