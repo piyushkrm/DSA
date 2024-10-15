@@ -16,10 +16,22 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
+
+// Approach 1 ---> Using brute force approach
+
+void sortArrayBruteForce(vector<int>& array) {
+    sort(array.begin(), array.end());
+}
+
 int main() {
     vector<int> arr = {2, 0, 1, 2, 0, 1, 0, 2, 1, 0};
+    sortArrayBruteForce(arr);
+    for (int num : arr) {
+        cout << num << " ";
+    }
     return 0;
 }
