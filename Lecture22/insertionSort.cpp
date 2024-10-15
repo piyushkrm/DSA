@@ -3,6 +3,7 @@
 // insertion sorting technique
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 void insertionSort(int arr[], int n) {
