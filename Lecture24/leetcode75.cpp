@@ -59,6 +59,26 @@ void sortArrayOptimizedBruteForce(vector<int>& array) {
     }
 }
 
+// Approach 3 ---> Optimal approach (Dutch National Flag Algorithm)
+void sortArrayDutchNationalFlagAlgorithm(vector<int>& array) {
+    int low = 0;
+    int mid = 0;
+    int high = array.size() - 1;
+
+    while(mid <= high) {
+        if (array[mid] == 0) {
+            swap(array[low++], array[mid++]);
+        } else if (array[mid] == 1) {
+            mid++;
+        } else {
+            swap(array[mid], array[high--]);
+        }
+    }
+}
+
+
+
+
 int main() {
     vector<int> arr = {2, 0, 1, 2, 0, 1, 0, 2, 1, 0};
     sortArrayBruteForce(arr);
@@ -67,12 +87,22 @@ int main() {
         cout << num << " ";
     }
     cout << endl;
-    
 
     sortArrayOptimizedBruteForce(arr);
     cout << "Sorted array (Approach 2): ";
     for (int num : arr) {
         cout << num << " ";
     }
+    cout << endl;
+    
+    sortArrayDutchNationalFlagAlgorithm(arr);
+    cout << "Sorted array (Approach 3): ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+
+
     return 0;
 }
