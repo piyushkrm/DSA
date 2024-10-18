@@ -1,5 +1,3 @@
-
-
 // Sort an array of 0's 1's and 2's 
 
     // Approach:
@@ -20,15 +18,14 @@
 
 using namespace std;
 
-
 // Approach 1 ---> Using brute force approach
 
 void sortArrayBruteForce(vector<int>& array) {
     sort(array.begin(), array.end());
 }
 
-// Approach 2 ---> Using optimized brute force approach
 
+// Approach 2 ---> Using optimized brute force approach
 void sortArrayOptimizedBruteForce(vector<int>& array) {
     int count0 = 0;
     int count1 = 0;
@@ -45,7 +42,6 @@ void sortArrayOptimizedBruteForce(vector<int>& array) {
     }
     
     int index = 0;
-
     for (int i = 0; i < count0; i++) {
         array[index++] = 0;
     }  
@@ -76,9 +72,7 @@ void sortArrayDutchNationalFlagAlgorithm(vector<int>& array) {
     }
 }
 
-
-
-
+// Main function
 int main() {
     vector<int> arr = {2, 0, 1, 2, 0, 1, 0, 2, 1, 0};
     sortArrayBruteForce(arr);
@@ -101,8 +95,6 @@ int main() {
         cout << num << " ";
     }
     cout << endl;
-
-
 
     return 0;
 }
