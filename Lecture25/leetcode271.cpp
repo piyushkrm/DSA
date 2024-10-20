@@ -35,6 +35,9 @@ bool containsDuplicate2(vector<int> &duplicates) {
 int main() {
     vector<int> nums = {1, 2, 3, 1};
     cout << (containsDuplicate(nums) ? "true" : "false") << endl;
-    cout << (containsDuplicate2(nums) ? "true" : "false") << endl;
+
+
+    vector<int> nums1 = {1, 2, 3, 4};
+    cout << (containsDuplicate2(nums1) ? "true" : "false") << endl;
     return 0;
 }
