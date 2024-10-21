@@ -27,5 +27,13 @@ int mergeSorted(vector<int>& a, vector<int>& b) {
 }
 
 int main() {
-
+    // call the function
+    vector<int> a = {1, 3, 5, 7, 0, 0, 0};
+    vector<int> b = {2, 4, 6, 8};
+    mergeSorted(a, b);
+    cout << "Merged array: ";
+    for (int i = 0; i < a.size(); i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
 }
