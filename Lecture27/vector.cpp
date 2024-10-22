@@ -29,6 +29,7 @@ int main() {
     vec.push_back(20);
     vec.push_back(30);
     printVector(vec);
+
     cout << "Size of vector after push_back : " << vec.size() << endl;
     return 0;
 }
