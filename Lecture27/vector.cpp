@@ -60,6 +60,10 @@ int main() {
     cout << "Back element of vector : " << vec.back() << endl;
     cout << endl;
 
+    // Initialize the vector
+    vector<int> vector = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    printVector(vector);
+
     cout << endl;
     return 0;
 }
