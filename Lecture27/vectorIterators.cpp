@@ -21,6 +21,11 @@ int main() {
     }
     cout << endl;
 
+    // backward iterator vector
+    for (auto it  = vec.rbegin(); it != vec.rend(); it++) {
+        cout << *it << " ";  // 5 4 3 2 1
+    }
+
 
     return 0;
 }
