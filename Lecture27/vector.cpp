@@ -96,7 +96,6 @@ int main() {
     vector<int> vec02(vec01);
     printVector(vec02);
 
-
     // erase
     vec.erase(vec.begin());
     // erase 3 index elements (starting from 0 and ending at 1) 
