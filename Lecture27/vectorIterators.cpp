@@ -11,7 +11,8 @@ int main() {
     // begin
     cout << *(vec.begin()) << endl;  // 1
 
-
+    // end
+    cout << *(vec.end()) << endl;  // Garbage values
 
 
     return 0;
