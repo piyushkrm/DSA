@@ -110,6 +110,10 @@ int main() {
     vec.insert(vec.begin() + 3, {10, 20});
     printVector(vec);
 
+    // Clear
+    vec.clear();
+    printVector(vec);
+
     cout << endl;
     return 0;
 }
