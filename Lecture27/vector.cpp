@@ -97,6 +97,10 @@ int main() {
     printVector(vec02);
 
 
+    // erase
+    vec.erase(vec.begin());
+    printVector(vec);
+
     cout << endl;
     return 0;
 }
