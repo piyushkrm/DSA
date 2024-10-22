@@ -115,8 +115,10 @@ int main() {
     printVector(vec);
     cout << "Size of vector after clear : " << vec.size() << endl;
     cout << "Capacity of vector after clear : " << vec.capacity() << endl;
+
+    // Empty
+    cout << "Is vector empty? : " << (vec.empty()? "Yes" : "No") << endl;
     cout << endl;
 
-    cout << endl;
     return 0;
 }
