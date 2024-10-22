@@ -23,6 +23,7 @@ int main() {
 
     // Size
     cout << "Size of vector : "<< vec.size() << endl;
+    cout << endl;
 
     // push back
     vec.push_back(10);
@@ -31,14 +32,21 @@ int main() {
     printVector(vec);
 
     cout << "Size of vector after push_back : " << vec.size() << endl;
+    cout << endl;
 
     // pop_back
     vec.pop_back();
     printVector(vec);
     cout << "Size of vector after push_back : " << vec.size() << endl;
+    cout << endl;
 
     //capacity
     cout << "Capacity of vector : " << vec.capacity() << endl;
+    cout << endl;
+
+    // at(index)
+    cout << "Element at index 1 : " << vec.at(1) << endl;
+    cout << endl;
 
 
     return 0;
