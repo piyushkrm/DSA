@@ -113,6 +113,9 @@ int main() {
     // Clear
     vec.clear();
     printVector(vec);
+    cout << "Size of vector after clear : " << vec.size() << endl;
+    cout << "Capacity of vector after clear : " << vec.capacity() << endl;
+    cout << endl;
 
     cout << endl;
     return 0;
