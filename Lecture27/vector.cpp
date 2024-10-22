@@ -99,6 +99,8 @@ int main() {
 
     // erase
     vec.erase(vec.begin());
+    // erase 3 index elements
+    vec.erase(vec.begin() + 3, vec.begin() + 6);
     printVector(vec);
 
     cout << endl;
