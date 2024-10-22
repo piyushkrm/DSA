@@ -37,7 +37,8 @@ int main() {
     printVector(vec);
     cout << "Size of vector after push_back : " << vec.size() << endl;
 
-
+    //capacity
+    cout << "Capacity of vector : " << vec.capacity() << endl;
 
 
     return 0;
