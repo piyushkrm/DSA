@@ -99,7 +99,7 @@ int main() {
 
     // erase
     vec.erase(vec.begin());
-    // erase 3 index elements
+    // erase 3 index elements (starting from 0 and ending at 1) 
     vec.erase(vec.begin() + 3, vec.begin() + 6);
     printVector(vec);
 
