@@ -48,6 +48,10 @@ int main() {
     cout << "Element at index 1 : " << vec.at(1) << endl;
     cout << endl;
 
+    // or[index]
+    cout << "Element at index 1 : " << vec[1] << endl;
+    cout << endl;
 
+    cout << endl;
     return 0;
 }
