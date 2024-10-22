@@ -56,6 +56,10 @@ int main() {
     cout << "Front element of vector : " << vec.front() << endl;
     cout << endl;
 
+    // back
+    cout << "Back element of vector : " << vec.back() << endl;
+    cout << endl;
+
     cout << endl;
     return 0;
 }
