@@ -31,5 +31,14 @@ int main() {
     printVector(vec);
 
     cout << "Size of vector after push_back : " << vec.size() << endl;
+
+    // pop_back
+    vec.pop_back();
+    printVector(vec);
+    cout << "Size of vector after push_back : " << vec.size() << endl;
+
+
+
+
     return 0;
 }
