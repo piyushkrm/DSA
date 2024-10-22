@@ -52,6 +52,10 @@ int main() {
     cout << "Element at index 1 : " << vec[1] << endl;
     cout << endl;
 
+    // front
+    cout << "Front element of vector : " << vec.front() << endl;
+    cout << endl;
+
     cout << endl;
     return 0;
 }
