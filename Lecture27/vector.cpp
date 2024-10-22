@@ -103,6 +103,13 @@ int main() {
     vec.erase(vec.begin() + 3, vec.begin() + 6);
     printVector(vec);
 
+    // Insert
+    // Insert element at index 2
+    vec.insert(vec.begin() + 2, 15);
+    // Insert elements at index 3 and 5
+    vec.insert(vec.begin() + 3, {10, 20});
+    printVector(vec);
+
     cout << endl;
     return 0;
 }
