@@ -64,6 +64,11 @@ int main() {
     vector<int> newVec(5, 10);
     printVector(newVec);
 
+    /* The code snippet you provided is creating two vectors `vec01` and `vec02`. */
+    vector<int> vec01 = {1, 2, 3, 4, 5, 6, 7, 8};
+    vector<int> vec02(vec01);
+    printVector(vec02);
+
     cout << endl;
     return 0;
 }
