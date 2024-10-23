@@ -73,6 +73,10 @@ void listFunctions(list<int>& list) {
     cout << "After insert, Size of list: " << list.size() << endl;
     printList(list);
 
+    // front element of list
+    cout << "Front element of list: " << *list.begin() << endl;
+    
+
     return;
 }
 
