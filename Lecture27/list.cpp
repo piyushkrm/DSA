@@ -55,6 +55,11 @@ void listFunctions(list<int>& list) {
     cout << "After clear, Size of list: " << list.size() << endl;
     printList(list);
 
+
+    // begin list
+    cout << "Front element of list: " << *list.begin() << endl;
+
+
     return;
 }
 
