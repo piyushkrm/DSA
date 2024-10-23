@@ -42,6 +42,11 @@ void listFunctions(list<int>& list) {
 
     // size of list
     cout << "Size of list: " << list.size() << endl;
+
+    // erase list 
+    list.erase(list.begin());
+    cout << "After erase, Size of list: " << list.size() << endl;
+    printList(list);
 }
 
 int main() {
