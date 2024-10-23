@@ -61,6 +61,9 @@ void listFunctions(list<int>& list) {
 
     // end list
     cout << "Back element of list: " << *list.rbegin() << endl;
+
+    // rbegin element of list
+    cout << "Last element of list (reverse order): " << *(--list.end()) << endl;
     
 
     return;
