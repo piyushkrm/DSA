@@ -28,7 +28,13 @@ void listFunctions(list<int>& list) {
     cout << "After pop back, Size of list: " << list.size() << endl;
     printList(list);
 
-    
+
+    // emplace_back
+    list.emplace_back(7);
+    cout << "After emplace back, Size of list: " << list.size() << endl;
+    printList(list);
+
+
 }
 
 int main() {
