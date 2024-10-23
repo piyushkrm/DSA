@@ -17,10 +17,14 @@ void printList(list<int>& list) {
 
 
 void listFunctions(list<int>& list) {
-
+    // push_back
+    list.push_back(6);
+    cout << "After push back, Size of list: " << list.size() << endl;
+    printList(list);
+    
 }
 
 int main() {
     list<int> myList = {1, 2, 3, 4, 5};
-
+    printList(myList);
 }
