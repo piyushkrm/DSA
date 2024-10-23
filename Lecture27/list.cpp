@@ -59,6 +59,9 @@ void listFunctions(list<int>& list) {
     // begin list
     cout << "Front element of list: " << *list.begin() << endl;
 
+    // end list
+    cout << "Back element of list: " << *list.rbegin() << endl;
+    
 
     return;
 }
