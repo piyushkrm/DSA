@@ -1,5 +1,3 @@
-
-
 // list container
 
 #include <iostream>
@@ -59,22 +57,28 @@ void listFunctions(list<int>& list) {
     // begin list
     cout << "Front element of list: " << *list.begin() << endl;
 
+
     // end list
     cout << "Back element of list: " << *list.rbegin() << endl;
+
 
     // rbegin element of list
     cout << "Last element of list (reverse order): " << *(--list.end()) << endl;
 
+
     // rend element of list
     cout << "First element of list (reverse order): " << *(list.rend()) << endl;
+
 
     // insert element at specific position
     list.insert(list.begin(), 8);
     cout << "After insert, Size of list: " << list.size() << endl;
     printList(list);
 
+
     // front element of list
     cout << "Front element of list: " << *list.begin() << endl;
+
 
     // back element of list
     cout << "Back element of list: " << *list.rbegin() << endl;
