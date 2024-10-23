@@ -21,6 +21,13 @@ void listFunctions(list<int>& list) {
     list.push_back(6);
     cout << "After push back, Size of list: " << list.size() << endl;
     printList(list);
+
+
+    // pop_back
+    list.pop_back();
+    cout << "After pop back, Size of list: " << list.size() << endl;
+    printList(list);
+
     
 }
 
