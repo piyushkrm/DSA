@@ -68,6 +68,11 @@ void listFunctions(list<int>& list) {
     // rend element of list
     cout << "First element of list (reverse order): " << *(list.rend()) << endl;
 
+    // insert element at specific position
+    list.insert(list.begin(), 8);
+    cout << "After insert, Size of list: " << list.size() << endl;
+    printList(list);
+
     return;
 }
 
