@@ -34,10 +34,14 @@ void listFunctions(list<int>& list) {
     cout << "After emplace back, Size of list: " << list.size() << endl;
     printList(list);
 
+
     // emplace_front
     list.emplace_front(0);
     cout << "After emplace front, Size of list: " << list.size() << endl;
     printList(list);
+
+    // size of list
+    cout << "Size of list: " << list.size() << endl;
 }
 
 int main() {
