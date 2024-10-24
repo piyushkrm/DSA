@@ -36,6 +36,9 @@ int main() {
     cout << "\nQueue elements after emplace: ";
     printQueue(q);
 
+    //front element
+    cout << "\nFront element: " << q.front();
+
 
 
     
