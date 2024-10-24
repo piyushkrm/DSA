@@ -75,5 +75,8 @@ int main() {
     // erase
     cout << "Erase at index 2 : ";
     queue.erase(queue.begin() + 2);  // erase 45
+    queue.erase(queue.begin() + 4); // erase 15
     print(queue);
+
+    
 }
