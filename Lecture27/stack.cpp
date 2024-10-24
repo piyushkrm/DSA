@@ -45,4 +45,9 @@ int main() {
     // top of stack
     cout << "Top element of stack: " << stack.top() << endl;
 
+    //pop the stack element
+    stack.pop();
+    cout << "Stack after pop: ";
+    printStack(stack);
+
 }
