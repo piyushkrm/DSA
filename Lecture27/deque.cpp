@@ -50,4 +50,10 @@ int main() {
     queue.emplace_front(100);
     queue.emplace_front(110);
     print(queue);
+
+
+    // pop_front
+    cout << "Pop front : ";
+    queue.pop_front();  // pop 110
+    print(queue);
 }
