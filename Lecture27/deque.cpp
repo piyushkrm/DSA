@@ -90,5 +90,9 @@ int main() {
 
     //front
     cout << "Front element of deque : " << queue.front() << endl;
+
+
+    // end
+    cout << "Ending element of deque : " << queue.back() << endl;
     
 }
