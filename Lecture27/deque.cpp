@@ -34,4 +34,12 @@ int main() {
     queue.push_front(35);
     queue.push_front(45);
     print(queue);
+
+
+    //emplace_back
+    cout << "Emplace back : ";
+    queue.emplace_back(60);
+    queue.emplace_back(70);
+    queue.emplace_back(80);
+    print(queue);
 }
