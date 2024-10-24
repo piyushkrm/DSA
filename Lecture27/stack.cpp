@@ -53,4 +53,7 @@ int main() {
     // size of stack
     cout << "Size of stack: " << stack.size() << endl;
 
+    // empty
+    cout << "Is stack empty? : " << (stack.empty()? "Yes" : "No") << endl;
+
 }
