@@ -30,6 +30,12 @@ int main() {
     cout << "Queue elements are: ";
     printQueue(q);
 
+    // emplace function
+    q.emplace(15);
+    q.emplace(75);
+    cout << "\nQueue elements after emplace: ";
+    printQueue(q);
+
 
 
     
