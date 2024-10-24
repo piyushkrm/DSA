@@ -5,8 +5,18 @@
 
 using namespace std;
 
+
+// print the element of the stack
+void printStack(stack<int> stack) {
+    while(!stack.empty()) {
+        cout << stack.top() << " "; // print the top element of the stack
+        stack.pop(); // remove the top element of the stack
+    }
+    cout << endl;
+}
+
 int main() {
-    stack<int> stack = {10, 50, 15, 26, 59, 78, 95};
+    stack<int> stack;
 
 
     // push the element in the stack
@@ -18,5 +28,8 @@ int main() {
     stack.push(78);
     stack.push(95);
 
+    // print the stack elements
+    cout << "Original Stack: ";
+    printStack(stack);
 
 }
