@@ -18,7 +18,6 @@ void printStack(stack<int> stack) {
 int main() {
     stack<int> stack1;
 
-
     // push the element in the stack
     stack1.push(10);
     stack1.push(50);
@@ -67,5 +66,4 @@ int main() {
     printStack(stack1);
     cout << "Stack2 after swap: ";
     printStack(stack2);
-
 }
