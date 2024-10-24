@@ -17,7 +17,19 @@ void printQueue(queue<int> que) {
 
 int main() {
     // Declare queue variables
-    queue<int> q = {10, 20, 30, 40, 50};
+    queue<int> q;
+
+    // push the element to the queue
+    q.push(13);
+    q.push(10);
+    q.push(22);
+    q.push(30);
+    q.push(13);
+    q.push(20);
+    q.push(25);
+    cout << "Queue elements are: ";
+    printQueue(q);
+
 
 
     
