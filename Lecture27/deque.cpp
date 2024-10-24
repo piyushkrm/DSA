@@ -99,4 +99,7 @@ int main() {
     //begin
     cout << "Begin element of deque : " << *queue.begin() << endl;
     
+
+    //end
+    cout << "End element of deque : " << *(queue.end()-1) << endl;
 }
