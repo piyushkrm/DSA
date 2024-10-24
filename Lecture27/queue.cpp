@@ -39,7 +39,10 @@ int main() {
     //front element
     cout << "\nFront element: " << q.front();
 
-
+    //pop function to remove element from the queue
+    q.pop();
+    cout << "\nQueue elements after pop: ";
+    printQueue(q);
 
     
 }
