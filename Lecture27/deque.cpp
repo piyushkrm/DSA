@@ -35,14 +35,12 @@ int main() {
     queue.push_front(45);
     print(queue);
 
-
     //emplace_back
     cout << "Emplace back : ";
     queue.emplace_back(60);
     queue.emplace_back(70);
     queue.emplace_back(80);
     print(queue);
-
 
     // emplace_front
     cout << "Emplace front : ";
@@ -51,26 +49,21 @@ int main() {
     queue.emplace_front(110);
     print(queue);
 
-
     // pop_front
     cout << "Pop front : ";
     queue.pop_front();  // pop 110
     print(queue);
 
-    
     // pop_back
     cout << "Pop back : ";
     queue.pop_back();  // pop 80
     print(queue);
 
-
     // size of deque
     cout << "Size of deque : " << queue.size() << endl;
 
-    
     // empty
     cout << "Is deque empty? : " << (queue.empty()? "Yes" : "No") << endl;
-
 
     // erase
     cout << "Erase at index 2 : ";
@@ -78,31 +71,24 @@ int main() {
     queue.erase(queue.begin() + 4); // erase 15
     print(queue);
 
-
     //insert 
     cout << "Insert 500 at index 2 : ";
     queue.insert(queue.begin() + 2, 500);
-
     cout << "Insert at the end of deque : ";
     queue.insert(queue.end(), 1000);
     print(queue);
 
-
     //front
     cout << "Front element of deque : " << queue.front() << endl;
-
 
     // end
     cout << "Ending element of deque : " << queue.back() << endl;
 
-
     //begin
     cout << "Begin element of deque : " << *queue.begin() << endl;
-    
 
     //end
     cout << "End element of deque : " << *(queue.end()-1) << endl;
-
 
     //rbegin
     cout << "Reverse begin element of deque : " << *queue.rbegin() << endl;
