@@ -86,5 +86,9 @@ int main() {
     cout << "Insert at the end of deque : ";
     queue.insert(queue.end(), 1000);
     print(queue);
+
+
+    //front
+    cout << "Front element of deque : " << queue.front() << endl;
     
 }
