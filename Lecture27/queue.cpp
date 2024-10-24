@@ -8,6 +8,12 @@
 using namespace std;
 
 // Function to print queue
+void printQueue(queue<int> que) {
+    while(!que.empty()) {
+        cout << que.front() << " ";
+        que.pop(); // remove front element
+    }
+}
 
 int main() {
     // Declare queue variables
