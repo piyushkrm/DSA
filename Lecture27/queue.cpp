@@ -47,5 +47,7 @@ int main() {
     // size of queue
     cout << "\nSize of queue: " << q.size();
 
+    // empty function
+    cout << "\nIs queue empty? " << (q.empty()? "Yes" : "No");
     
 }
