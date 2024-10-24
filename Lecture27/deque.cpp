@@ -62,4 +62,8 @@ int main() {
     cout << "Pop back : ";
     queue.pop_back();  // pop 80
     print(queue);
+
+
+    // size of deque
+    cout << "Size of deque : " << queue.size() << endl;
 }
