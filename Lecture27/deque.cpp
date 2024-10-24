@@ -66,4 +66,8 @@ int main() {
 
     // size of deque
     cout << "Size of deque : " << queue.size() << endl;
+
+    
+    // empty
+    cout << "Is deque empty? : " << (queue.empty()? "Yes" : "No") << endl;
 }
