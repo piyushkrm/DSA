@@ -14,7 +14,7 @@ void print(deque<int> deque) {
 }
 
 int main() {
-    cout << "Original deque : "
+    cout << "Original deque : ";
     deque<int> queue = {0};
     print(queue);
 
