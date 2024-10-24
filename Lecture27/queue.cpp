@@ -49,5 +49,13 @@ int main() {
 
     // empty function
     cout << "\nIs queue empty? " << (q.empty()? "Yes" : "No");
+
+    // swap function
+    queue<int> q2;
+    q2.push(40);
+    q2.push(50);
+    q.swap(q2);
+    cout << "\nQueue elements after swap: ";
+    printQueue(q);
     
 }
