@@ -14,10 +14,12 @@ void print(deque<int> deque) {
 }
 
 int main() {
-    deque<int> queue;
+    cout << "Original deque : "
+    deque<int> queue = {0};
+    print(queue);
 
     // push_back
-    cout << "Push back" << " : ";
+    cout << "Push back : ";
     queue.push_back(10);
     queue.push_back(20);
     queue.push_back(30);
@@ -25,7 +27,7 @@ int main() {
     print(queue);
 
     // push_front
-    cout << "Push front" << " : ";
+    cout << "Push front : ";
     queue.push_front(5);
     queue.push_front(15);
     queue.push_front(25);
