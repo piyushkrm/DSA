@@ -50,4 +50,7 @@ int main() {
     cout << "Stack after pop: ";
     printStack(stack);
 
+    // size of stack
+    cout << "Size of stack: " << stack.size() << endl;
+
 }
