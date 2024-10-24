@@ -78,5 +78,10 @@ int main() {
     queue.erase(queue.begin() + 4); // erase 15
     print(queue);
 
+
+    //insert 
+    cout << "Insert 500 at index 2 : ";
+    queue.insert(queue.begin() + 2, 500);
+    print(queue);
     
 }
