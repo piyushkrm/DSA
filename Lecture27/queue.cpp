@@ -44,5 +44,8 @@ int main() {
     cout << "\nQueue elements after pop: ";
     printQueue(q);
 
+    // size of queue
+    cout << "\nSize of queue: " << q.size();
+
     
 }
