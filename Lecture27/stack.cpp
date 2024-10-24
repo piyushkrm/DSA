@@ -42,4 +42,7 @@ int main() {
     cout << "Stack after emplace_stack: ";
     printStack(stack);
 
+    // top of stack
+    cout << "Top element of stack: " << stack.top() << endl;
+
 }
