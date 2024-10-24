@@ -102,4 +102,8 @@ int main() {
 
     //end
     cout << "End element of deque : " << *(queue.end()-1) << endl;
+
+
+    //rbegin
+    cout << "Reverse begin element of deque : " << *queue.rbegin() << endl;
 }
