@@ -6,6 +6,13 @@
 
 using namespace std;
 
+void print(deque<int> deque) {
+    for (auto i : deque) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
 int main() {
     deque<int> queue;
 
