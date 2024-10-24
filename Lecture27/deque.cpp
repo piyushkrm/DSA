@@ -56,4 +56,10 @@ int main() {
     cout << "Pop front : ";
     queue.pop_front();  // pop 110
     print(queue);
+
+    
+    // pop_back
+    cout << "Pop back : ";
+    queue.pop_back();  // pop 80
+    print(queue);
 }
