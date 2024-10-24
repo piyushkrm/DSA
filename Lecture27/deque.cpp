@@ -109,4 +109,9 @@ int main() {
 
     //rend
     cout << "Reverse ending element of deque : " << *(queue.rend()-1) << endl;
+
+    //clear
+    cout << "Clear deque : ";
+    queue.clear();
+    print(queue);
 }
