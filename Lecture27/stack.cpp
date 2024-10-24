@@ -32,4 +32,14 @@ int main() {
     cout << "Original Stack: ";
     printStack(stack);
 
+    //emplace_stack
+    stack.emplace(30);
+    stack.emplace(60);
+    stack.emplace(80);
+    stack.emplace(100);
+
+    // print the stack elements after emplace_stack
+    cout << "Stack after emplace_stack: ";
+    printStack(stack);
+
 }
