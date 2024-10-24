@@ -70,4 +70,10 @@ int main() {
     
     // empty
     cout << "Is deque empty? : " << (queue.empty()? "Yes" : "No") << endl;
+
+
+    // erase
+    cout << "Erase at index 2 : ";
+    queue.erase(queue.begin() + 2);  // erase 45
+    print(queue);
 }
