@@ -52,4 +52,7 @@ int main() {
     pq.pop();
     cout << "Priority queue elements after pop: ";
     printQueue(pq);
+
+    // size of priority queue
+    cout << "Size of priority queue: " << pq.size() << endl;
 }
