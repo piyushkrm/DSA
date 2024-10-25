@@ -44,4 +44,7 @@ int main() {
     // print the priority queue elements after emplace
     cout << "Priority queue elements after emplace: ";
     printQueue(pq);
+
+    // top level elements
+    cout << "Top element of priority queue: " << pq.top() << endl;
 }
