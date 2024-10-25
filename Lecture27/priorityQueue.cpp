@@ -35,4 +35,13 @@ int main() {
     cout << "Priority queue elements: ";
     printQueue(pq);
 
+    // emplace the priority queue elements
+    pq.emplace(30);
+    pq.emplace(60);
+    pq.emplace(80);
+    pq.emplace(100);
+    
+    // print the priority queue elements after emplace
+    cout << "Priority queue elements after emplace: ";
+    printQueue(pq);
 }
