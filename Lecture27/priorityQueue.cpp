@@ -47,4 +47,9 @@ int main() {
 
     // top level elements
     cout << "Top element of priority queue: " << pq.top() << endl;
+
+    // pop the top element
+    pq.pop();
+    cout << "Priority queue elements after pop: ";
+    printQueue(pq);
 }
