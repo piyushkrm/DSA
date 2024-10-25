@@ -8,7 +8,7 @@ using namespace std;
 
 
 // Function to print priority queue
-int void printQueue(priority_queue<int> queue) {
+void printQueue(priority_queue<int> queue) {
     while(!queue.empty()) {
         cout << queue.top() << " ";
         queue.pop(); // remove the top element
@@ -21,5 +21,18 @@ int void printQueue(priority_queue<int> queue) {
 int main() {
     // Declare priority queue with integer data type
     priority_queue<int> pq;
+
+    // push the elements in the priority queue
+    pq.push(10);
+    pq.push(50);
+    pq.push(15);
+    pq.push(26);
+    pq.push(59);
+    pq.push(78);
+    pq.push(95);
+    
+    // print the priority queue elements
+    cout << "Priority queue elements: ";
+    printQueue(pq);
 
 }
