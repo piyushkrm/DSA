@@ -55,4 +55,7 @@ int main() {
 
     // size of priority queue
     cout << "Size of priority queue: " << pq.size() << endl;
+
+    // empty queue 
+    cout << "Is priority queue empty? : " << (pq.empty()? "Yes" : "No") << endl;
 }
