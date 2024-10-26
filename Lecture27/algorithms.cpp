@@ -49,6 +49,11 @@ int main() {
     // Min and max elements
     cout << "Min element (10, 15) : " << min(10, 15) << endl;
     cout << "Max element (10, 15) : " << max(10, 15) << endl;
+    
+    // Swap elements
+    int a = 5, b = 10;
+    swap(a, b);
+    cout << "After swapping a and b: a = " << a << ", b = " << b << endl;
 
     return 0;
 }
