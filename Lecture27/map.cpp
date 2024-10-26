@@ -4,12 +4,28 @@
 
 #include <iostream>
 #include <map>
+#include <unordered_map>
+
 using namespace std;
 
 
-// function to print the elements of map
+// Function to print elements of a map
 void printMap(map<string, int>& map) {
     for (auto val : map) {
+        cout << val.first << " - " << val.second << endl;  // print key-value pair as (key, value)
+    }
+}
+
+// Function to print elements of a multimap
+void printMultimap(multimap<string, int>& multimap) {
+    for (auto val : multimap) {
+        cout << val.first << " - " << val.second << endl;  // print key-value pair as (key, value)
+    }
+}
+
+// Function to print elements of an unordered_map
+void printUnorderedMap(unordered_map<string, int>& unorderedMap) {
+    for (auto val : unorderedMap) {
         cout << val.first << " - " << val.second << endl;  // print key-value pair as (key, value)
     }
 }
@@ -62,6 +78,34 @@ int main() {
 
     // Empty
     cout << "\nIs Map empty? : " << (houseMaterials.empty()? "Yes" : "No") << endl;
+
+
+    //  Multimap
+    multimap<string, int> houseColors;
+    houseColors.insert({"TV", 5});
+    houseColors.insert({"Bed", 4});
+    houseColors.insert({"Window", 2});
+    houseColors.insert({"Door", 3});
+    houseColors.insert({"Roof", 1});
+    houseColors.insert({"Floor", 6});
+    houseColors.insert({"Fan", 10});
+    houseColors.insert({"Heater", 1});
+    houseColors.insert({"TV", 6});  // duplicate key
+    cout << "\nOriginal Multimap:" << endl;
+    printMultimap(houseColors);
+
+    // Unordered collections
+    unordered_map<string, int> unorderedMap;
+    unorderedMap.emplace("Garden", 3);
+    unorderedMap.emplace("Hall", 2);
+    unorderedMap.emplace("Kitchen", 4);
+    unorderedMap.emplace("Living Room", 5);
+    unorderedMap.emplace("Bedroom", 1);
+
+
+    cout << "\nUnordered Map:" << endl;
+    printUnorderedMap(unorderedMap);
+    
 
     return 0;
 }
