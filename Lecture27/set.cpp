@@ -38,4 +38,11 @@ int main() {
     } else {
         cout << "20 not found in the set" << endl;
     }
+
+    // empty set 
+    if (s.empty()) {
+        cout << "The set is empty" << endl;
+    } else {
+        cout << "The set is not empty" << endl;
+    }
 }
