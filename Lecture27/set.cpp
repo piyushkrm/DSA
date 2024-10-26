@@ -48,4 +48,13 @@ int main() {
 
     // size check
     cout << "Size of the set: " << s.size() << endl;
+
+    // lower bound
+    auto lower_bound = s.lower_bound(15);
+    cout << "Lower bound of 15: ";
+    if (lower_bound!= s.end()) {
+        cout << *lower_bound << endl;
+    } else {
+        cout << "Lower bound does not exist" << endl;
+    }
 }
