@@ -45,4 +45,7 @@ int main() {
     } else {
         cout << "The set is not empty" << endl;
     }
+
+    // size check
+    cout << "Size of the set: " << s.size() << endl;
 }
