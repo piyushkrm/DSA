@@ -41,6 +41,9 @@ int main() {
     // count keys
     cout << "\nNumber of keys in Map: " << houseMaterials.count("Bathroom") << endl;
 
+    // printKey Value
+    cout << "\nValue of 'TV': " << houseMaterials["TV"] << endl;
+
 
     return 0;
 }
