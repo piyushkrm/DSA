@@ -26,4 +26,9 @@ int main() {
 
     // count
     cout << "Count of 20: " << s.count(20) << endl;
+
+    // erasing 20 
+    s.erase(20);
+    cout << "After erasing 20: ";
+    printElements(s);
 }
