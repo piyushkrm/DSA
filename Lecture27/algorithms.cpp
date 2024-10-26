@@ -22,4 +22,9 @@ int main() {
     sort(arr, arr + n);
     cout << "Sorted array in ascending order: ";
     printArray(arr, n);
+
+    //  sort arrays with decreasing order
+    sort(arr, arr + n, greater<int>());
+    cout << "Sorted array in descending order: ";
+    printArray(arr, n);
 }
