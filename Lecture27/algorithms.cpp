@@ -46,5 +46,9 @@ int main() {
     cout << "Previous permutation: ";
     printArray(arr2, n2);
 
+    // Min and max elements
+    cout << "Min element (10, 15) : " << min(10, 15) << endl;
+    cout << "Max element (10, 15) : " << max(10, 15) << endl;
+
     return 0;
 }
