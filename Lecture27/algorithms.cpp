@@ -67,6 +67,9 @@ int main() {
     int arr4[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int n4 = sizeof(arr4) / sizeof(arr4[0]);
     int x = 5;
+    int result = binary_search(arr4, arr4 + n4, x);
+    (result)? cout << x << " is present in array" : cout << x << " is not present in array";
+    
 
     return 0;
 }
