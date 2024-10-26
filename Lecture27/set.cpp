@@ -90,5 +90,15 @@ int main() {
     ms.insert(20);  // duplicates are allowed
     cout << "Multi set: ";
     printMultisetElements(ms);
-    
+
+
+    // unordered ser
+    unordered_set<int> us;
+    us.insert(10);
+    us.insert(50);
+    us.insert(30);
+    us.insert(12);
+    us.insert(20);
+    us.insert(40);
+
 }
