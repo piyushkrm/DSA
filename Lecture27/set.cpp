@@ -2,9 +2,7 @@
 
 #include <iostream>
 #include <set>
-
-
-
+#include <unordered_set>
 
 using namespace std;
 
@@ -17,8 +15,15 @@ void printElements(set<int>& elements) {
 }
 
 // print multiset elements
-
 void printMultisetElements(multiset<int>& elements) {
+    for (auto element : elements) {
+        cout << element << " ";
+    }
+    cout << endl;
+}
+
+//  print the unordered set of elements
+void printUnorderedSetElements(unordered_set<int>& elements) {
     for (auto element : elements) {
         cout << element << " ";
     }
@@ -100,5 +105,8 @@ int main() {
     us.insert(12);
     us.insert(20);
     us.insert(40);
+    cout << "Unordered set: ";
+    printUnorderedSetElements(us);
 
+    return 0;
 }
