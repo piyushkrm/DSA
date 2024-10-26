@@ -3,10 +3,22 @@
 #include <iostream>
 #include <set>
 
+
+
+
 using namespace std;
 
 //  print elements of the sets
 void printElements(set<int>& elements) {
+    for (auto element : elements) {
+        cout << element << " ";
+    }
+    cout << endl;
+}
+
+// print multiset elements
+
+void printMultisetElements(multiset<int>& elements) {
     for (auto element : elements) {
         cout << element << " ";
     }
@@ -66,4 +78,17 @@ int main() {
     } else {
         cout << "Upper bound does not exist" << endl;
     }
+
+    // Multi set
+    multiset<int> ms;
+    ms.insert(10);
+    ms.insert(50);
+    ms.insert(30);
+    ms.insert(12);
+    ms.insert(20);
+    ms.insert(40);
+    ms.insert(20);  // duplicates are allowed
+    cout << "Multi set: ";
+    printMultisetElements(ms);
+    
 }
