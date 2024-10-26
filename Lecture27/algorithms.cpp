@@ -41,5 +41,10 @@ int main() {
     cout << "Next permutation: ";
     printArray(arr2, n2);
 
+    // Previous permutation
+    prev_permutation(arr2, arr2 + n2);
+    cout << "Previous permutation: ";
+    printArray(arr2, n2);
+
     return 0;
 }
