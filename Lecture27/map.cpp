@@ -6,6 +6,14 @@
 #include <map>
 using namespace std;
 
+
+// function to print the elements of map
+void printMap(map<string, int>& map) {
+    for (auto val : map) {
+        cout << val.first << " - " << val.second << endl;  // print key-value pair as (key, value)
+    }
+}
+
 int main() {
     map<string, int> houseMaterials;
     houseMaterials["TV"] = 5;
