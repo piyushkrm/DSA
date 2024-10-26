@@ -44,6 +44,9 @@ int main() {
     // printKey Value
     cout << "\nValue of 'TV': " << houseMaterials["TV"] << endl;
 
-
+    // erase values
+    houseMaterials.erase("TV");
+    cout << "\nMap after erasing TV: " << endl;
+    printMap(houseMaterials);
     return 0;
 }
