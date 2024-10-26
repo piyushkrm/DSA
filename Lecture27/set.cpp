@@ -31,4 +31,11 @@ int main() {
     s.erase(20);
     cout << "After erasing 20: ";
     printElements(s);
+
+    // find 20
+    if (s.find(20)  != s.end()) {
+        cout << "20 found in the set" << endl;
+    } else {
+        cout << "20 not found in the set" << endl;
+    }
 }
