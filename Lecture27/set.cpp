@@ -5,6 +5,14 @@
 
 using namespace std;
 
+//  print elements of the sets
+void printElements(set<int>& elements) {
+    for (auto element : elements) {
+        cout << element << " ";
+    }
+    cout << endl;
+}
+
 int main() {
     set<int> s;
     s.insert(10);
