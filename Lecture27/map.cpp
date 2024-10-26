@@ -25,6 +25,14 @@ int main() {
     houseMaterials["Fan"] = 10;
     houseMaterials["Heater"] = 1;
 
+    cout << "Original Map:" << endl;
+    printMap(houseMaterials);
+
+    // insert element
+    houseMaterials.insert({"Kitchen", 2});
+    cout << "\nMap after inserting Kitchen: " << endl;
+    printMap(houseMaterials);
+
 
 
     return 0;
