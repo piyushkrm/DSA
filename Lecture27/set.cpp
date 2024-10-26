@@ -57,4 +57,13 @@ int main() {
     } else {
         cout << "Lower bound does not exist" << endl;
     }
+
+    // upper bound
+    auto upper_bound = s.upper_bound(35);
+    cout << "Upper bound of 35: ";
+    if (upper_bound!= s.end()) {
+        cout << *upper_bound << endl;
+    } else {
+        cout << "Upper bound does not exist" << endl;
+    }
 }
