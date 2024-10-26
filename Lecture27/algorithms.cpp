@@ -69,7 +69,14 @@ int main() {
     int x = 5;
     int result = binary_search(arr4, arr4 + n4, x);
     (result)? cout << x << " is present in array" : cout << x << " is not present in array";
-    
+
+    // Count and set bits
+    int num = 10;
+    cout << "Number of set bits in " << num << ": " << __builtin_popcount(num) << endl;
+    cout << "Number of set bits in " << num << ": " << __builtin_popcountl(num) << endl;
+    cout << "Number of set bits in " << num << ": " << __builtin_popcountll(num) << endl;
+
+
 
     return 0;
 }
