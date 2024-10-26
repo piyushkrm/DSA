@@ -76,7 +76,5 @@ int main() {
     cout << "Number of set bits in " << num << ": " << __builtin_popcountl(num) << endl;
     cout << "Number of set bits in " << num << ": " << __builtin_popcountll(num) << endl;
 
-
-
     return 0;
 }
