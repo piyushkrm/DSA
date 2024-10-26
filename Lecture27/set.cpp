@@ -23,4 +23,7 @@ int main() {
     s.insert(40);
     cout << "Original set: ";
     printElements(s);
+
+    // count
+    cout << "Count of 20: " << s.count(20) << endl;
 }
