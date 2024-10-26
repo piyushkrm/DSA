@@ -48,5 +48,14 @@ int main() {
     houseMaterials.erase("TV");
     cout << "\nMap after erasing TV: " << endl;
     printMap(houseMaterials);
+
+    // find values
+    houseMaterials.find("Bathroom");
+    if (houseMaterials.find("Bathroom") != houseMaterials.end()) {
+        cout << "\nKey 'Bathroom' found in Map." << endl;
+    } else { 
+        cout << "\nKey 'Bathroom' not found in Map." << endl;
+    }
+
     return 0;
 }
