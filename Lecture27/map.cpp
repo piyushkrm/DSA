@@ -38,6 +38,8 @@ int main() {
     cout << "\nMap after emplacing Bathroom: " << endl;
     printMap(houseMaterials);
 
+    // count keys
+    cout << "\nNumber of keys in Map: " << houseMaterials.count("Bathroom") << endl;
 
 
     return 0;
