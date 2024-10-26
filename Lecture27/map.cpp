@@ -33,6 +33,11 @@ int main() {
     cout << "\nMap after inserting Kitchen: " << endl;
     printMap(houseMaterials);
 
+    // emplace element
+    houseMaterials.emplace("Bathroom", 2);
+    cout << "\nMap after emplacing Bathroom: " << endl;
+    printMap(houseMaterials);
+
 
 
     return 0;
