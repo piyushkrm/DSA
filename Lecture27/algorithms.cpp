@@ -55,5 +55,18 @@ int main() {
     swap(a, b);
     cout << "After swapping a and b: a = " << a << ", b = " << b << endl;
 
+    // Min and max elements of the array
+    int arr3[] = {5, 2, 8, 1, 3};
+    int n3 = sizeof(arr3) / sizeof(arr3[0]);
+    int minValue = *min_element(arr3, arr3 + n3);
+    int maxValue = *max_element(arr3, arr3 + n3);
+    cout << "Min element in array (5, 2, 8, 1, 3): " << minValue << endl;
+    cout << "Max element in array (5, 2, 8, 1, 3): " << maxValue << endl;
+
+    // Binary search
+    int arr4[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int n4 = sizeof(arr4) / sizeof(arr4[0]);
+    int x = 5;
+
     return 0;
 }
