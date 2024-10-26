@@ -60,5 +60,8 @@ int main() {
     // size of the map
     cout << "\nSize of Map: " << houseMaterials.size() << endl;
 
+    // Empty
+    cout << "\nIs Map empty? : " << (houseMaterials.empty()? "Yes" : "No") << endl;
+
     return 0;
 }
