@@ -57,5 +57,8 @@ int main() {
         cout << "\nKey 'Bathroom' not found in Map." << endl;
     }
 
+    // size of the map
+    cout << "\nSize of Map: " << houseMaterials.size() << endl;
+
     return 0;
 }
