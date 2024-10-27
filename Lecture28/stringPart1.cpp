@@ -17,6 +17,12 @@ int main() {
     cin >> str2;
     cout << "String entered: " << str2 << endl;
 
+    // Input and output for character arrays
+    char str3[100];
+    cin.getline(str3, 100);
+    cout << "Character array entered: " << str3 << endl;
+    
+
 
     return 0;
 }
