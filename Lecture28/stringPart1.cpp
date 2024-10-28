@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -52,6 +53,23 @@ int main() {
     for (char st : st3) {
         cout << st << " ";
     }
+    cout << endl;
+
+    //Reverse
+    // Reverse for characters
+    string s1 = "CodeWithPiyush";
+    int st = 0;
+    int end = s1.length() - 1;
+
+    while (st < end) {
+        swap(s1[st++], s1[end--]);
+    }
+    cout << "Reversed string: " << s1 << endl;
+
+    // Reverse for string
+    string s2 = "CodeWithPihu";
+    reverse(s2.begin(), s2.end());
+    cout << "Reversed string: " << s2 << endl;
 
     return 0;
 }
