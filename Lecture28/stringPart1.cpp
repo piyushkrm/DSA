@@ -35,6 +35,10 @@ int main() {
     cout << "Concatenated string: " << st3 << endl;
     
 
+    // String comparison
+    cout << "Comparison of st1 and st2: " << (st1 == st2? "Equal" : "Not equal") << endl;
+    cout << "Comparison of st1 and st2: " << (st1 < st2 ? "st1 is less than st2" : "st1 is greater than st2") << endl;
+
 
     return 0;
 }
