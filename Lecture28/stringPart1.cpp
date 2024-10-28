@@ -43,6 +43,15 @@ int main() {
     string st4 = st1.substr(3, 5);
     cout << "Substring: " << st4 << endl;
 
+    // Loops on string
+    for (int i = 0; i < st3.length(); i++) {
+        cout << st3[i] << " ";
+    }
+    cout << endl;
+
+    for (char st : st3) {
+        cout << st << " ";
+    }
 
     return 0;
 }
