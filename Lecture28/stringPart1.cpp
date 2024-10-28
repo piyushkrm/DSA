@@ -21,6 +21,14 @@ int main() {
     char str3[100];
     cin.getline(str3, 100);
     cout << "Character array entered: " << str3 << endl;
+
+    //String function or operations
+    string st1 = "Piyush";
+    string st2 = "Mishra";
+
+    // length of strings
+    cout << "Length of st1: " << st1.length() << endl;
+    cout << "Length of st2: " << st2.length() << endl;
     
 
 
