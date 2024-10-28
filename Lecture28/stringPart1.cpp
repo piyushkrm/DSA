@@ -39,6 +39,10 @@ int main() {
     cout << "Comparison of st1 and st2: " << (st1 == st2? "Equal" : "Not equal") << endl;
     cout << "Comparison of st1 and st2: " << (st1 < st2 ? "st1 is less than st2" : "st1 is greater than st2") << endl;
 
+    // Substring
+    string st4 = st1.substr(3, 5);
+    cout << "Substring: " << st4 << endl;
+
 
     return 0;
 }
