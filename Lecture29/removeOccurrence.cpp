@@ -13,5 +13,9 @@ string removeOccurrences(string s, string sub) {
 }
 
 int main() {
-
+    string s = "daabcbaabcbc";
+    string sub = "abc";
+    cout << "Original string: " << s << endl;
+    cout << "String after removing " << sub << ": " << removeOccurrences(s, sub) << endl;
+    return 0;
 }
