@@ -26,5 +26,6 @@ string removeWord(string str) {
 }
 
 int main() {
-
+    string s = "The sky is blue";
+    cout << removeWord(s) << endl;
 }
