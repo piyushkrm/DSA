@@ -30,7 +30,7 @@ string compressString(string word) {
     return comparison;  // return comparison string
 }
 int main() {
-    string word = "aaabbbccc";
+    string word = "abcde";
     cout << compressString(word) << endl;  // Output: "3a3b3c"
     return 0;
 }
