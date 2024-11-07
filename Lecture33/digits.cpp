@@ -36,6 +36,7 @@ void sumDigits(int x) {
     }
     cout << "Sum of digits: " << sum << endl;
 }
+
 int main() {
     int num;
     cout << "Enter a number: ";
@@ -43,5 +44,6 @@ int main() {
     countDigits(num);
     printDigits(num);
     sumDigits(num);
+    shortCut(num);
     return 0;
 }
