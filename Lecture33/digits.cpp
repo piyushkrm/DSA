@@ -23,6 +23,18 @@ void printDigits(int x) {
         cout << digit << " ";
         x /= 10;
     }
+    cout << endl;
+}
+
+// Function to calculate the sum of digits
+void sumDigits(int x) {
+    int sum = 0;
+    while (x != 0) {
+        int digit = x % 10;
+        sum += digit;
+        x /= 10;
+    }
+    cout << "Sum of digits: " << sum << endl;
 }
 int main() {
     int num;
@@ -30,5 +42,6 @@ int main() {
     cin >> num;
     countDigits(num);
     printDigits(num);
+    sumDigits(num);
     return 0;
 }
