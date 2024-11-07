@@ -20,6 +20,21 @@ int gcd(int x, int y) {
     return gcd;
 }
 
+// Optimized approach to find out the GCD and HCF using Euclid's algorithm
+
+int gcdOptimized(int x, int y) {
+    while(x > 0 && y > 0) {
+        if (x > y) {
+            x = x % y;
+            // x -= y;
+        } else {
+            y = y % x;
+            // y -= x;
+        }
+    }
+    return (x == 0 ) ? y : x;  // If x is 0, return y, otherwise return x
+}
+
 int main() {
     int num1, num2;
     cout << "Enter 1st numbers: ";
@@ -29,5 +44,8 @@ int main() {
 
     // Calculate GCD
     cout << "GCD of " << num1 << " and " << num2 << " is: " << gcd(num1, num2) << endl;
+
+    // Calculate HCF
+    cout << "HCF of " << num1 << " and " << num2 << " is: " << gcdOptimized(num1, num2) << endl;
     return 0;
 }
