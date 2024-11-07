@@ -15,10 +15,20 @@ void countDigits(int x) {
     }
     cout << "Number of digits: " << count << endl;
 }
+
+// Function to print the number of digits in a number
+void printDigits(int x) {
+    while (x != 0) {
+        int digit = x % 10;
+        cout << digit << " ";
+        x /= 10;
+    }
+}
 int main() {
     int num;
     cout << "Enter a number: ";
     cin >> num;
     countDigits(num);
+    printDigits(num);
     return 0;
 }
