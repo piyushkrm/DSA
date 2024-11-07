@@ -35,6 +35,12 @@ int gcdOptimized(int x, int y) {
     return (x == 0 ) ? y : x;  // If x is 0, return y, otherwise return x
 }
 
+// Euclid's algorithm with recursion
+int gcdRecursion(int x, int y) {
+    if (x == 0) return y; 
+    return gcdRecursion(y % x, x);
+}
+
 int main() {
     int num1, num2;
     cout << "Enter 1st numbers: ";
@@ -47,5 +53,8 @@ int main() {
 
     // Calculate HCF
     cout << "HCF of " << num1 << " and " << num2 << " is: " << gcdOptimized(num1, num2) << endl;
+
+    // Calculate GCD using recursion
+    cout << "GCD of " << num1 << " and " << num2 << " using recursion is: " << gcdRecursion(num1, num2) << endl;
     return 0;
 }
