@@ -5,9 +5,20 @@
 #include <iostream>
 using namespace std;
 
+// Function to count the number of digits in a number
+void countDigits(int x) {
+    int count = 0;
+    while (x != 0) {
+        int digit = x % 10;
+        count++;
+        x /= 10;
+    }
+    cout << "Number of digits: " << count << endl;
+}
 int main() {
     int num;
     cout << "Enter a number: ";
     cin >> num;
+    countDigits(num);
     return 0;
 }
