@@ -1,12 +1,11 @@
 
 // Search in a 2D MatrixII
 // Leet code problem 240
-// Pending
 
 #include <iostream>
 #include <vector>
 
-using namespace std;S
+using namespace std;
 
 // Function to search element on the 2D matrix
 bool searchMatrix(vector<vector<int>>& matrix, int target) {        // TC 0(n + m)
@@ -15,7 +14,7 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {        // TC 0(n + 
     int row = 0;
     int column = n - 1;
 
-    while(roe < m && column >= 0) {
+    while(row < m && column >= 0) {
         if (target == matrix[row][column]) {
             return true;
         }
@@ -29,7 +28,7 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {        // TC 0(n + 
     return false;
 }
 int main() {
-    int matrix[5][5] = {
+    vector<vector<int>> matrix = {
         {1, 4, 7, 11, 15},
         {2, 5, 8, 12, 19},
         {3, 6, 9, 16, 22},
@@ -37,5 +36,5 @@ int main() {
         {18, 21, 23, 26, 30}
     };
     int target = 5;
-    cout << searchMatrix(matrix, target);
+    cout << (searchMatrix(matrix, target) ? "True" : "False") << endl;
 }
