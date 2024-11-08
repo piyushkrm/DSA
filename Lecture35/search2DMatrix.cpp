@@ -1,4 +1,3 @@
-// Pending
 // 74. Search a 2D Matrix
 // You are given an m x n integer matrix matrix with the following two properties:
 
