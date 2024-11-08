@@ -1,4 +1,4 @@
-
+// Pending
 // 74. Search a 2D Matrix
 // You are given an m x n integer matrix matrix with the following two properties:
 
@@ -11,8 +11,10 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 // Search on row
-bool searchRow(vector<vector<int>> matrix, int target, int row)
+bool searchRow(vector<vector<int>> &matrix, int target, int row)
 {
     int n = matrix[0].size();
     int start = 0;
@@ -39,39 +41,39 @@ bool searchRow(vector<vector<int>> matrix, int target, int row)
 
 bool searchMatrix(vector<vector<int>> &matrix, int target)
 {
-    // Binary Search
     int m = matrix.size();
     int n = matrix[0].size();
     int startRow = 0;
     int endRow = m - 1;
 
+    // Binary search to find the correct row
     while (startRow <= endRow)
     {
         int midRow = startRow + (endRow - startRow) / 2;
 
+        // Check if target is within the bounds of the midRow
         if (target >= matrix[midRow][0] && target <= matrix[midRow][n - 1])
         {
-            // Found the row
-            // Binary Search on this row
-            return searchRow(matrix, target, startRow);
+            // Perform binary search on the selected row
+            return searchRow(matrix, target, midRow);
         }
         else if (target >= matrix[midRow][n - 1])
         {
-            // Down
+        // Move to the lower part of the matrix
             startRow = midRow + 1;
         }
         else
         {
-            // Up
+            // Move to the upper part of the matrix
             endRow = midRow - 1;
         }
     }
-    return false;
+    return false;       // Target not found in any row
 }
 
 int main()
 {
-    int matrix[][] = {
+    vector<vector<int>> matrix = {
         {1, 3, 5, 7},
         {10, 11, 16, 20},
         {23, 30, 34, 60}};
