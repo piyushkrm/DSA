@@ -1,4 +1,4 @@
-
+// Pending
 
 // Spiral Matrix Leet code problem 54
 
@@ -14,18 +14,18 @@ vector<int> spiralOrder(vector<vector<int>> & matrix) {
     int startRow = 0;
     int startCol = 0;
     int endRow = m - 1;
-    int endCol = m - 1;
+    int endCol = n - 1;
     
     vector<int> ans;
 
     while(startRow <= endRow && startCol <= endCol) {
         // For top boundary
-        for (int j = startCol; j < endCol; j++) {
+        for (int j = startCol; j <= endCol; j++) {
             ans.push_back(matrix[startRow][j]);
         }
 
         // Right boundary
-        for (int i = startRow; i < endRow; i++) {
+        for (int i = startRow + 1; i <= endRow; i++) {
             ans.push_back(matrix[i][endCol]);
         }
 
@@ -44,17 +44,28 @@ vector<int> spiralOrder(vector<vector<int>> & matrix) {
             }
             ans.push_back(matrix[i][startRow]);
         }
+        startRow++; // Move down the top boundary
+        endRow--;   // Move up the bottom boundary
+        startCol++; // Move right the left boundary
+        endCol--;   // Move left the right boundary
     }
     return ans;
 }
 
 int main() {
-    int matrix[][4] = {
+    vector<vector<int>> matrix = {
         {1, 2, 3, 4},
         {5, 6, 7, 8},
         {9, 10, 11, 12},
         {13, 14, 15, 16}
     };
-    cout << spiralOrder(matrix) << endl;
-    
+
+    vector<int> result = spiralOrder(matrix);
+
+    // Output the result
+    for (int num : result) {
+        cout << num << " ";
+    }
+    cout << endl;
+    return 0;
 }
