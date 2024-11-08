@@ -46,8 +46,7 @@ int main() {
 
     int maxRowSum = get_max_row_of_sum(matrix, 4, 3);
     cout << "Maximum row sum: " << maxRowSum << endl;
-    // int maxColumnSum = get_max_column_of_sum(matrix, 4, 3);
-    int maxColumnSum = get(matrix, 4, 3);
+    int maxColumnSum = get_max_column_of_sum(matrix, 4, 3);
     cout << "Maximum column sum: " << maxColumnSum << endl;
     return 0;
 }
