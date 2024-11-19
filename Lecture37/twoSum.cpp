@@ -12,6 +12,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 
 using namespace std;
 
@@ -52,11 +53,40 @@ void two_sum(vector<int>& numbers, int target) {
     cout << "No two numbers add up to the target." << endl;
 }
 
+
+// Approach 3 --> Using hashing
+vector<int> two_Sum(vector<int>& nums, int target) {
+    unordered_map<int, int> map;
+    vector<int> answer;
+
+    for (int i = 0; i < nums.size(); i++) {
+        int first = nums[i];
+        int second = target - first;
+
+        if (map.find(second) != map.end()) {
+            answer.push_back(i);
+            answer.push_back(map[second]);
+            break;
+        }
+
+        nums[first] = i;
+    }
+    return answer;
+}
+
+
 int main() {
     vector<int> nums = {2, 7, 11, 15};
     int target = 9;
+    // 1
     vector<int> result = twoSum(nums, target);
     cout << "Indices of the two numbers that add up to target: " << result[0] << ", " << result[1] << endl;
+
+    // 2
     two_sum(nums, target);
+
+    // 3
+    vector<int> answer = two_Sum(nums, target);
+    cout << "Indices of the two numbers that add up to target: " << answer[0] << ", " << answer[1] << endl;
     return 0;
 }
