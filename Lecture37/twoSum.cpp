@@ -8,6 +8,19 @@
 
 // You can return the answer in any order.
 
+<<<<<<< HEAD
+Your local changes
+=======
+Remote changes
+>>>>>>> origin/main
+
+<<<<<<< HEAD
+cout << "Your version" << endl;
+=======
+cout << "Remote version" << endl;
+>>>>>>> origin/main
+
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
