@@ -41,6 +41,6 @@ int main() {
     for (int num : ans) {
         cout << num << " ";
     }
-    cout << endl; // Output: 9 2 8 3 4 6 1 7
+    cout << endl; // Output: 9 5
     return 0;
 }
