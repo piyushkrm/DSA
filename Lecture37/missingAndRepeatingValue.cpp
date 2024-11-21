@@ -34,7 +34,6 @@ vector<int> findMissingAndRepeated(vector<vector<int>>& grid) {
     result.push_back(b);
     return result;
 }
-
 int main() {
     vector<vector<int>> grid = {{9,1,7},{8,9,2},{3,4,6}};
     vector<int> ans = findMissingAndRepeated(grid);
