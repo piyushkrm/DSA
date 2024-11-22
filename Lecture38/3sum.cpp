@@ -34,8 +34,35 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     }
     return result;
 }
+
+// Approach 2 - With hashing
+
+vector<vector<int>> threeSumHashing(vector<int>& nums) {
+    int n = nums.size();
+    vector<vector<int>> result;
+    set<vector<int>> uniqueTriplets;
+
+    for (int i = 0; i < n; i++) {
+        int target = -nums[i];
+        set<int> st;
+
+        for (int j = i + 1; j < n; j++) {
+            int third = target - nums[j];
+            if (st.find(third)!= st.end()) {
+                vector<int> triplet = {nums[i], nums[j], third};
+                sort(triplet.begin(), triplet.end());
+                uniqueTriplets.insert(triplet);
+            }
+            st.insert(nums[j]);
+        }
+    }
+    vector<vector<int>> result(uniqueTriplets.begin(), uniqueTriplets.end());
+    return result;
+}
 int main() {
     vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    // Approach 1 
+    cout << "Approach 1 - Brute force approach:" << endl;  // Output: [-1, -1, 2], [-1, 0, 1], [0, 0, 0]  // Sorting the triplets to remove duplicates
     vector<vector<int>> triplets = threeSum(nums);
     for (auto triplet : triplets) {
         for (int num : triplet) {
@@ -43,5 +70,16 @@ int main() {
         }
         cout << endl;
     }
+    cout << "Approach 2 - Hashing approach:" << endl;  // Output: [-1, -1, 2], [-1, 0, 1], [0, 0, 0]  // Sorting the triplets to remove duplicates
+    cout << "---------------------------------------" << endl;
+    // Approach 2 
+    vector<vector<int>> tripletsHashing = threeSumHashing(nums);
+    for (auto triplet : tripletsHashing) {
+        for (int num : triplet) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+
     return 0;
 }
