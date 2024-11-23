@@ -43,3 +43,15 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     return result;
 }
 
+int main() {
+    vector<int> nums = {1, 0, -1, 0, -2, 2};
+    int target = 0;
+    vector<vector<int>> result = fourSum(nums, target);
+    for (auto &v : result) {
+        for (int &num : v) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
