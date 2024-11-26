@@ -26,6 +26,27 @@ bool isSorted(int arr[], int n) {
         return (arr[n-1] >= arr[n-2] && isSorted(arr, n-1));
 }
 
+// Recursive function for Binary search Leet code problem 704
+int binarySearch(int arr[], int left, int right, int target) {
+    if (right >= left) {
+        int mid = left + (right - left) / 2;
+
+        // If the element is present at the middle itself
+        if (arr[mid] == target)
+            return mid;
+
+        // If element is smaller than mid, then it can only be present in left subarray
+        if (arr[mid] > target)
+            return binarySearch(arr, left, mid - 1, target);
+
+        // Else the element can only be present in right subarray
+        return binarySearch(arr, mid + 1, right, target);
+    }
+
+    // We reach here when element is not present in array
+    return -1;
+}
+
 int main() {
     int n;
     cout << "Enter the value of n: ";
@@ -34,6 +55,9 @@ int main() {
 
     int arr[] = {1, 2, 3, 4, 5};
     cout << "Is the array sorted? " << (isSorted(arr, 5)? "Yes" : "No") << endl;
+
+    int target = 2;
+    cout << "Index of " << target << " is: " << binarySearch(arr, 0, 4, target) << endl;
 
     return 0;
 }
