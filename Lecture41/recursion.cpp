@@ -18,5 +18,6 @@ int main() {
     cout << "Enter the number to print numbers from n to 1: ";
     cin >> n;
     printNums(n);
+    
     return 0;
 }
