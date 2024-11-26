@@ -20,10 +20,20 @@ int fibonacciNum(int n) {
     return fibonacciNum(n-1) + fibonacciNum(n-2);
 }
 
+// Recursive function to check if the array is sorted or not
+bool isSorted(int arr[], int n) {
+    if (n == 0 || n == 1) return true;
+        return (arr[n-1] >= arr[n-2] && isSorted(arr, n-1));
+}
+
 int main() {
     int n;
     cout << "Enter the value of n: ";
     cin >> n;
     cout << "The " << n << "th Fibonacci number is: " << fibonacciNum(n) << endl;
+
+    int arr[] = {1, 2, 3, 4, 5};
+    cout << "Is the array sorted? " << (isSorted(arr, 5)? "Yes" : "No") << endl;
+
     return 0;
 }
