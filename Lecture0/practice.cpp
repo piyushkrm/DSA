@@ -57,6 +57,24 @@ int op(int n) {
     return (n % 2 == 0)? n : n + 1;
 }
 
+// 9. Calculate sum of 1  to n number with function
+int sumOfn(int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+// 10. Calculate factorial using loops
+int factorialWithLoop(int n) {
+    int factorial = 1;
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+    return factorial;
+}
+
 
 
 
@@ -100,6 +118,12 @@ int main() {
 
     // 8. Ternary operator
     cout << "Ternary operator result: " << op(20) << endl;
+
+    // 9. Calculate sum of 1 to n number with function
+    cout << "Sum of 1 to " << "50" << ": " << sumOfn(50) << endl;
+
+    // 10. Calculate factorial using loops
+    cout << "Factorial of 5 using loops: " << factorialWithLoop(5) << endl;
 
 
 
