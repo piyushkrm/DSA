@@ -47,6 +47,11 @@ int factorial(int n) {
     return n * factorial(n - 1);
 }
 
+// 7. Check if the age is greater than or equal to 18 years old or not
+bool age(int n) {
+    return n >= 18;  
+}
+
 
 
 
@@ -84,5 +89,8 @@ int main() {
     int factorialNumber = 5;
     cout << "Factorial of " << factorialNumber << ": " << factorial(factorialNumber) << endl;
 
+    // 7. Check if the age is greater than or equal to 18 years old or not
+    int ageNumber = 17;
+    cout << "Age is valid: " << (age(ageNumber)? "Yes" : "No") << endl;
     return 0;
 }
