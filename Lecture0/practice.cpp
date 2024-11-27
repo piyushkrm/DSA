@@ -52,6 +52,11 @@ bool age(int n) {
     return n >= 18;  
 }
 
+// 8. Ternary operator
+int op(int n) {
+    return (n % 2 == 0)? n : n + 1;
+}
+
 
 
 
@@ -92,5 +97,11 @@ int main() {
     // 7. Check if the age is greater than or equal to 18 years old or not
     int ageNumber = 17;
     cout << "Age is valid: " << (age(ageNumber)? "Yes" : "No") << endl;
+
+    // 8. Ternary operator
+    cout << "Ternary operator result: " << op(20) << endl;
+
+
+
     return 0;
 }
