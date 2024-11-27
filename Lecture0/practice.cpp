@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <climits>
+#include <unordered_set>
 
 using namespace std;
 
@@ -158,9 +159,31 @@ void swapMinMax(int array[], int size) {
     printArray(array, size);
 }
 
+// 16. Write a function to print the intersection of two arrays
+void intersection(int array1[], int array1Length, int array2[], int array2Length) {
+    // Create a set to store unique elements from array1
+    unordered_set<int> uniqueElements;
 
+    // Insert all elements of array1 into the set 
+    for (int i = 0; i < array1Length; i++) {
+        uniqueElements.insert(array1[i]);
+    }
 
+    bool found = false; // To track if any intersection is found
+    // Iterate through array2 and check if any intersection is found
+    cout << "Found intersection elements : ";
+    for (int i = 0; i < array2Length; i++) {
+        if (uniqueElements.find(array2[i])!= uniqueElements.end()) {
+            cout << array2[i] << " ";   // Print the intersection elements
+            uniqueElements.erase(array2[i]); // Remove the intersection element from the set
+            found = true;
+        }
+    }
+    if (!found) {
+        cout << "No intersection found." << endl;
+    }
 
+}
 
 
 
@@ -229,6 +252,14 @@ int main() {
 
     // 15. Min and max element of an array
     swapMinMax(array, size);
+
+    // 16. Intersection of two arrays
+    int array1[] = {1, 2, 3, 4, 5};
+    int array2[] = {4, 5, 6, 7, 8};
+    int array1Length = sizeof(array1) / sizeof(array1[0]);
+    int array2Length = sizeof(array2) / sizeof(array2[0]);
+    intersection(array1, array1Length, array2, array2Length);
+
 
 
     
