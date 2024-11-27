@@ -40,6 +40,20 @@ int min(int n, int m) {
 int max(int n, int m) {
     if (n < m) return n;
 }
+
+// 6. Find the factorial of a number
+int factorial(int n) {
+    if (n <= 1) return  1;
+    return n * factorial(n - 1);
+}
+
+
+
+
+
+
+
+
 int main() {
     // 1 Sum of two numbers
     int sum = sumOfTwoNumbers(5, 7);
@@ -65,6 +79,10 @@ int main() {
     // 5. Minumum and maximum number
     cout << "Minimum number: " << min(0, 10) << endl;
     cout << "Maximum number: " << max(10, 0) << endl;
+
+    // 6. Find the factorial of a number
+    int factorialNumber = 5;
+    cout << "Factorial of " << factorialNumber << ": " << factorial(factorialNumber) << endl;
 
     return 0;
 }
