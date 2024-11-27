@@ -85,7 +85,47 @@ int sumOfDigits(int n) {
     return digits;
 }
 
+// 12. Array Linear Search
+int linearSearch(int array[], int size, int target) {
+    int index = -1;
+    for (int i = 0; i < size; i++) {
+        if (array[i] == target) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
 
+// 13. Write a function to Reverse the array element
+void printArray(const int array[], int size);
+void reverseArray(int array[], int size) {
+    int start = 0;
+    int end = size - 1;
+
+    // Swap array elements from start to end
+    while (start < end) {
+        int temp = array[start];
+        array[start] = array[end];
+        array[end] = temp;
+
+        // Move pointers
+        start++;
+        end--;
+    }
+
+    // Print reversed array
+    cout << "Reversed Array: ";
+    printArray(array, size);
+}
+
+// 14. Function to print the array elements
+void printArray(const int array[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
 
 
 
@@ -137,7 +177,17 @@ int main() {
     int number = 12345;
     cout << "Sum of digits of " << number << ": " << sumOfDigits(number) << endl;
 
+    // 12. Array Linear Search
+    int array[] = {1, 2, 3, 4, 5};
+    int size = sizeof(array) / sizeof(array[0]);
+    int target = 3;
+    int index = linearSearch(array, size, target);
+    cout << "Target found at index: " << index << endl;
+
+    // 13. Reverse the array element
+    reverseArray(array, size);
 
 
+    
     return 0;
 }
