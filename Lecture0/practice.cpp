@@ -75,7 +75,15 @@ int factorialWithLoop(int n) {
     return factorial;
 }
 
-
+// 11. Calculate sum of digits of the number
+int sumOfDigits(int n) {
+    int digits = 0;
+    while ( n > 0) {
+        digits += n % 10;
+        n /= 10;
+    }
+    return digits;
+}
 
 
 
@@ -124,6 +132,10 @@ int main() {
 
     // 10. Calculate factorial using loops
     cout << "Factorial of 5 using loops: " << factorialWithLoop(5) << endl;
+
+    // 11. Calculate sum of digits of the number
+    int number = 12345;
+    cout << "Sum of digits of " << number << ": " << sumOfDigits(number) << endl;
 
 
 
