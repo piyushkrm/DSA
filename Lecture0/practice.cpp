@@ -4,6 +4,7 @@
 
 
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
@@ -127,6 +128,45 @@ void printArray(const int array[], int size) {
     cout << endl;
 }
 
+// 15. Write a function to swap the max and min values of an array
+void swapMinMax(int array[], int size) {
+    int min = INT_MAX;
+    int max = INT_MIN;
+    int min_INDEX = -1;
+    int max_INDEX = -1;
+
+    // Find min and max values
+    for (int i = 0; i < size; i++) {
+        if (array[i] < min) {
+            min = array[i];
+            min_INDEX = i;
+        }
+
+        if (array[i] > max) {
+            max = array[i];
+            max_INDEX = i;
+        }
+    }
+    cout << "Minimum number: " << min << endl;
+    cout << "Maximum number: " << max << endl;
+
+    // Swap min and max values
+    int temp = array[min_INDEX];
+    array[min_INDEX] = array[max_INDEX];
+    array[max_INDEX] = temp;
+
+    printArray(array, size);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,6 +226,9 @@ int main() {
 
     // 13. Reverse the array element
     reverseArray(array, size);
+
+    // 15. Min and max element of an array
+    swapMinMax(array, size);
 
 
     
