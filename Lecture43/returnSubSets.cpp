@@ -26,3 +26,21 @@ void getSubSet(vector<int >& num, vector<int>& subsets, int i, vector<int>&allSu
 
 }
 
+vector<vector<int>> subsets(vector<int>& nums) {
+    vector<vector<int>> allSubSet;
+    vector<int> ans;
+    getAllSubSet(nums, ans, 0, allSubSet);
+
+    return allSubSet;
+    }
+
+int main() {
+    vector<int> nums = {1, 2, 3};
+    vector<vector<int>> subsets = subsets(nums);
+    for (auto subset : subsets) {
+        for (int num : subset) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+}
