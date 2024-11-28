@@ -8,18 +8,18 @@
 
 using namespace std;
 
-void getSubSet(vector<int >& num, vector<int>& subsets, int i, vector<int>&allSubSets) {
+void getSubSet(vector<int >& nums, vector<int>& subsets, int i, vector<vector<int>>& allSubSets) {
     if (i == nums.size()) {
         allSubSets.push_back(subsets);
         return;
     }
 
     // Inclusion
-    ans.push_back(nums[i]);
+    subsets.push_back(nums[i]);
     getSubSet(nums, subsets, i + 1, allSubSets);
 
     // Backtracking
-    ans.pop_back();
+    subsets.pop_back();
 
     // Exclusion
     getSubSet(nums, subsets, i + 1, allSubSets);
@@ -29,15 +29,15 @@ void getSubSet(vector<int >& num, vector<int>& subsets, int i, vector<int>&allSu
 vector<vector<int>> subsets(vector<int>& nums) {
     vector<vector<int>> allSubSet;
     vector<int> ans;
-    getAllSubSet(nums, ans, 0, allSubSet);
+    getSubSet(nums, ans, 0, allSubSet);
 
     return allSubSet;
-    }
+}
 
 int main() {
     vector<int> nums = {1, 2, 3};
-    vector<vector<int>> subsets = subsets(nums);
-    for (auto subset : subsets) {
+    vector<vector<int>> allsubsets = subsets(nums);
+    for (auto subset : allsubsets) {
         for (int num : subset) {
             cout << num << " ";
         }
