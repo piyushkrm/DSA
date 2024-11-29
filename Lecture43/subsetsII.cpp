@@ -37,3 +37,16 @@ using namespace std;
         getSubSet(nums, ans, 0, allSubSet);
         return allSubSet;
     }
+
+
+    int main() {
+        vector<int> nums = {1, 2, 2};
+        vector<vector<int>> result = subsetsWithDup(nums);
+        for (auto subset : result) {
+            for (int num : subset) {
+                cout << num << " ";
+            }
+            cout << endl;
+        }
+        return 0;
+    }
