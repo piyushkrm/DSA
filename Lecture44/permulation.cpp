@@ -30,7 +30,10 @@ vector<vector<int>> permute(vector<int>& nums) {
 
 int main() {
     vector<int> nums = {1, 2, 3};
-    vector<vector<int>> result = permute(nums);
+    vector<int> nums1 = {10, 20, 30};
+    // vector<vector<int>> result = permute(nums);
+    vector<vector<int>> result = permute(nums1);
+
 
     cout << "Permutations:" << endl;
     for (const auto& permutation : result) {
