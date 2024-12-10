@@ -14,6 +14,19 @@ using namespace std;
 
 
 
+
+
+
+    // Print the solutions
+    void printSolutions(vector<vector<string>>& solutions) {
+        for (const auto& solution : solutions) {
+            for (const auto& row : solution) {
+                cout << row << endl;
+            }
+            cout << endl;
+        }
+    }
+
     int main() {
         int n = 4; // Number of queens
         vector<vector<string>> solutions = solveNQueens(n);
@@ -21,7 +34,6 @@ using namespace std;
         printSolutions(solutions);
         return 0;
     }
-    
 
 // Time complexity: O(n!), where n is the number of queens. This is because there are n! possible configurations of placing n queens on an n x n chessboard.    
 
