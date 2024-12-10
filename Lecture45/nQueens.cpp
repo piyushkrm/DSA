@@ -12,6 +12,39 @@
 
 using namespace std;
 
+// Function to check if placing a queen at board[row][col] is safe
+    bool isSafe(vector<string>& board, int row, int col, int n) {
+        // Check the same row (horizontal)
+        for (int j = 0; j < n; j++) {
+            if (board[row][j] == 'Q') {
+                return false;
+            }
+        }
+
+        // Check the same column (vertical)
+        for (int i = 0; i < n; i++) {
+            if (board[i][col] == 'Q') {
+                return false;
+            }
+        }
+
+        // Check the upper left diagonal
+        for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
+            if (board[i][j] == 'Q') {
+                return false;
+            }
+        }
+
+        // Check the upper right diagonal
+        for (int i = row, j = col; i >= 0 && j < n; i--, j++) {
+            if (board[i][j] == 'Q') {
+                return false;
+            }
+        }
+
+        // If no conflicts, the position is safe
+        return true;
+    }
 
     // Recursive function to solve the N-Queens problem
     void nQueens(vector<string>& board, int row, int n, vector<vector<string>>& ans) {
