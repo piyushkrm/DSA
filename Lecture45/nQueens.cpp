@@ -21,6 +21,7 @@ using namespace std;
         printSolutions(solutions);
         return 0;
     }
+    
 
 // Time complexity: O(n!), where n is the number of queens. This is because there are n! possible configurations of placing n queens on an n x n chessboard.    
 
