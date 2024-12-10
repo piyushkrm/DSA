@@ -13,7 +13,24 @@
 using namespace std;
 
 
+    // Recursive function to solve the N-Queens problem
+    void nQueens(vector<string>& board, int row, int n, vector<vector<string>>& ans) {
+        // Base case: All queens are placed
+        if (row == n) {
+            ans.push_back(board); // Add the current configuration to the solution
+            return;
+        }
 
+        // Iterate over each column in the current row
+        for (int j = 0; j < n; j++) {
+            // Check if placing a queen at board[row][j] is safe
+            if (isSafe(board, row, j, n)) {
+                board[row][j] = 'Q'; // Place the queen
+                nQueens(board, row + 1, n, ans); // Recur to place the next queen
+                board[row][j] = '.'; // Backtrack by removing the queen
+            }
+        }
+    }
 
     // Main function to solve the N-Queens problem
     vector<vector<string>> solveNQueens(int n) {
