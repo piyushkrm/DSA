@@ -15,7 +15,13 @@ using namespace std;
 
 
 
-
+    // Main function to solve the N-Queens problem
+    vector<vector<string>> solveNQueens(int n) {
+        vector<string> board(n, string(n, '.')); // Initialize the chessboard
+        vector<vector<string>> ans; // To store all possible solutions
+        nQueens(board, 0, n, ans); // Start solving from the first row
+        return ans; // Return all valid configurations
+    }
 
     // Print the solutions
     void printSolutions(vector<vector<string>>& solutions) {
