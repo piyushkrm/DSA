@@ -15,6 +15,7 @@ int main() {
         cout << val << endl;
     }
     cout << endl;
+    
     return 0;
 
 }
