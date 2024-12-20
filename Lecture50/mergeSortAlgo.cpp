@@ -7,6 +7,38 @@
 
 using namespace std;
 
+// Merge function for sorting algorithm
+void merge(arr, st, mid, end) {
+    vector<int> temp;
+    int i = st, j = mid + 1;
+
+    // Merge the sorted sub-arrays
+    while (i <= mid && j <= end) {
+        if (arr[i] <= arr[j]) {
+            temp.push_back(arr[i]);
+            i++;
+        } else {
+            temp.push_back(arr[j]);
+            j++;
+        }
+    }
+
+    while(i <= mid) {
+        temp.push_back(arr[i]);
+        i++;
+    }
+
+    while(j <= end) {
+        temp.push_back(arr[j]);
+        j++;
+    }
+
+    // Copy the sorted elements to original array
+    for (int k = st; k <= end; k++) {
+        arr[k] = temp[k - st];
+    }
+}
+
 // Function to divide array elements
 void mergeSort(arr[], st, end) {
     if (st < end) {
