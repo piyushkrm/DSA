@@ -8,13 +8,14 @@
 using namespace std;
 
 // Merge function for sorting algorithm
-void merge(arr, st, mid, end) {
+void merge(vector<int>& arr, int st, int mid, int end) {
     vector<int> temp;
     int i = st, j = mid + 1;
 
     // Merge the sorted sub-arrays
     while (i <= mid && j <= end) {
-        if (arr[i] <= arr[j]) {
+        // if (arr[i] <= arr[j]) {                 // Accending ordering
+        if (arr[i] >= arr[j]) {                 // Decending ordering
             temp.push_back(arr[i]);
             i++;
         } else {
@@ -40,7 +41,7 @@ void merge(arr, st, mid, end) {
 }
 
 // Function to divide array elements
-void mergeSort(arr[], st, end) {
+void mergeSort(vector<int>& arr, int st, int end) {
     if (st < end) {
         int mid = st + (end - st) / 2;
         mergeSort(arr, st, mid);
@@ -54,7 +55,7 @@ int main() {
     mergeSort(arr, 0, arr.size() - 1);
     cout << "Sorted array is: ";
     for (int val : arr) {
-        cout << val << endl;
+        cout << val << " ";
     }
     cout << endl;
 
