@@ -8,6 +8,16 @@
 
 using namespace std;
 
+// Find path function
+vector<string> findPath(vector<vector<int>>& maze) {
+    int n = maze.size();
+    vector<string> answer;
+    string path = "";
+
+    helper(maze, 0, 0, path, answer);
+    return answer;
+}
+
 
 // Main function
 int main() {
