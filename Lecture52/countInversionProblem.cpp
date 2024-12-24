@@ -24,6 +24,32 @@ int countInversions(vector<int>& nums) {
 
 // Optimal implementation
 
+
+int merge(vector<int>& arr, int st, int mid, int end) {
+    vector<int> temp;
+    int i = st, j = mid + 1, k = st;
+    int count = 0;
+
+    while (i <= mid && j <= end) {
+        if (arr[i] <= arr[j]) {
+            temp.push_back(arr[i++]);
+        } else {
+            temp.push_back(arr[j++]);
+            count += mid - i + 1;
+        }
+    }
+
+    while (i <= mid) {
+        temp.push_back(arr[i++]);
+    }
+    while (j <= end) {
+        temp.push_back(arr[j++]);
+    }
+    for (int i = st; i <= end; i++) {
+        arr[i] = temp[k++];
+    }
+    return count;
+}
 int mergeSort(vector<int>& arr, int st, int end) {
     if (st <= end) {
         int mid = (st + end) / 2;
