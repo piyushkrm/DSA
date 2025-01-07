@@ -103,9 +103,19 @@ public:
     int year;     // Manufacturing year
     string color; // Car color
 
-    // Constructor
+    // Constructor --> Non parameters constructor
     Car() {
         cout << "I am a constructor for Car." << endl;
+    }
+
+    // Parameters constructor
+    Car(string n, string m, int y, string c, double p) {
+        cout << "\nI am a Parameters-constructor for Car." << endl;
+        name = n;
+        model = m;
+        year = y;
+        color = c; 
+        price = p;
     }
 
     // Setter method for price
@@ -159,6 +169,8 @@ int main() {
     // Display the father's information
     father.getInfo();
 
+
+
     // Demonstrating Constructor in the Car class
     cout << "\nThis is OOPs lecture 55 Constructor." << endl;
     Car car;
@@ -174,6 +186,14 @@ int main() {
 
     // Display the car's information
     car.getInfo();
+
+    // Parameter constructor
+    // Create a Car object using the parameterized constructor
+    Car myCar("Toyota", "Corolla", 2021, "Red", 25000);
+    // Now the myCar object has been initialized with these values
+    myCar.getInfo(); // This will display the car's information
+
+
 
     return 0;
 }
