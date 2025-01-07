@@ -39,6 +39,59 @@ public:
     }
 };
 
+
+// Encapsulation 
+class Father {  //Class
+
+private:
+    string name;
+    string fatherName;
+    string motherName;
+    int age;
+
+public:
+
+    void setName(string n) {
+        name = n;
+    }
+
+    void setFatherName(string fn) {
+        fatherName = fn;
+    }
+
+    void setMotherName(string mn) {
+        motherName = mn;
+    }
+
+    void setAge(int a) {
+        age = a;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    string getFatherName() {
+        return fatherName;
+    }
+
+    string getMotherName() {
+        return motherName;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    void getInfo() {
+        cout << "Name: " << name << endl;
+        cout << "Father's Name: " << fatherName << endl;
+        cout << "Mother's Name: " << motherName << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+
 int main() {
     cout << "This is OOPs lecture 54." << endl;
 
@@ -56,6 +109,20 @@ int main() {
 
     // Display the teacher's information
     teacher.getInformation();
+
+
+    // Encapsulation
+    cout << "\nThis is OOPs lecture 55 Encapsulation." << endl;
+    Father father;
+
+    // Accessing the member function using setter methods
+    father.setName("John Doe");
+    father.setFatherName("John");
+    father.setMotherName("Jane");
+    father.setAge(50);
+    
+    // Display the father's information
+    father.getInfo();
 
     return 0;
 }
