@@ -199,7 +199,7 @@ class Phone {
 
 // Inheritance
 class GrandParent {
-    public:
+public:
     string name;
     int age;
 
@@ -207,45 +207,58 @@ class GrandParent {
         cout << "I am a GrandParent." << endl;
         this->name = name;
         this->age = age;
-    } 
-
-    void display() {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
     }
 
+    void display() {
+        cout << "GrandParent - Name: " << name << endl;
+        cout << "GrandParent - Age: " << age << endl;
+    }
 };
 
-// Single level inheritance
 class Parent : public GrandParent {
-    public:
+public:
     string occupation;
 
     Parent(string name, int age, string occupation) : GrandParent(name, age) {
-        cout << "I am a Parent." << endl;
+        cout << "\nI am a Parent." << endl;
         this->occupation = occupation;
-    } 
+    }
 
     void display() {
-        GrandParent::display();
-        cout << "Occupation: " << occupation << endl;
+        GrandParent::display();  // Call GrandParent's display method
+        cout << "Parent - Occupation: " << occupation << endl;
     }
 };
 
-// Multilevel inheritance
+class Child : public GrandParent {
+public:
+    string school;
 
-class Child : public Parent {
-    public:
-    string grade;
-    Child(string name, int age, string occupation, string grade) : Parent(name, age, occupation) {
-        cout << "I am a Child." << endl;
-        this->grade = grade;
+    Child(string name, int age, string school) : GrandParent(name, age) {
+        cout << "\nI am a Child." << endl;
+        this->school = school;
     }
 
     void display() {
-        Parent::display();
-        cout << "Grade: " << grade << endl;
-        cout << endl;
+        GrandParent::display();  // Call GrandParent's display method
+        cout << "Child - School: " << school << endl;
+    }
+};
+
+class GrandChild : public Child, public Parent {
+public:
+    string hobby;
+
+    GrandChild(string name, int age, string school, string occupation, string hobby) 
+    : Child(name, age, school), Parent(name, age, occupation) {
+        cout << "\nI am a GrandChild." << endl;
+        this->hobby = hobby;
+    }
+
+    void display() {
+        // You need to specify which base class's display function to call
+        Parent::display(); // Calls Parent's display method (and calls GrandParent display via Parent)
+        cout << "GrandChild - Hobby: " << hobby << endl;
     }
 };
 
@@ -335,8 +348,12 @@ int main() {
     // parent.display(); // This will display both GrandParent and Parent's information.
 
     // Multilevel inherited
-    Child child("John Doe", 70, "Engineer", "12th");
-    child.display(); // This will display Child's information.
+    // Child child("John Doe", 70, "Engineer", "12th");
+    // child.display(); // This will display Child's information.
+
+    // Multiple inheritance
+    GrandChild grandChild("John Doe", 70, "Engineer", "12th", "Reading");
+    grandChild.display(); // This will display GrandChild's, Parent's, and GrandParent's information.
 
 
     return 0;
