@@ -342,6 +342,70 @@ public:
 };
 
 
+// Hybrid Inheritance
+class Person {
+public:
+    string name;
+    int age;
+
+    // Constructor for Person
+    Person(string name, int age) {
+        this->name = name;
+        this->age = age;
+    }
+
+    void displayPerson() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+// Derived class - Employee (Hierarchical Inheritance)
+class Employee : public Person {
+public:
+    string jobTitle;
+
+    // Constructor for Employee
+    Employee(string name, int age, string jobTitle) : Person(name, age) {
+        this->jobTitle = jobTitle;
+    }
+
+    void displayEmployee() {
+        cout << "Job Title: " << jobTitle << endl;
+    }
+};
+
+// Derived class - Student (Hierarchical Inheritance)
+class Student : public Person {
+public:
+    string major;
+
+    // Constructor for Student
+    Student(string name, int age, string major) : Person(name, age) {
+        this->major = major;
+    }
+
+    void displayStudent() {
+        cout << "Major: " << major << endl;
+    }
+};
+
+// Derived class - Intern (Multiple Inheritance)
+class Intern : public Employee, public Student {
+public:
+    // Constructor for Intern
+    Intern(string name, int age, string jobTitle, string major)
+        : Employee(name, age, jobTitle), Student(name, age, major) {}
+
+    void displayIntern() {
+        // Explicitly call displayPerson from Person class using scope resolution
+        Employee::displayPerson(); // Calls Person's displayPerson via Employee
+        displayEmployee();
+        displayStudent();
+    }
+};
+
+
 
 // Main function demonstrating the use of classes and objects
 int main() {
@@ -453,6 +517,12 @@ int main() {
     // shapePtr = &triangle;
     // shapePtr->calculateArea();  // Calls Triangle's calculateArea
 
+
+    // Creating an Intern object (Hybrid Inheritance)
+    Intern intern("John Doe", 22, "Software Developer", "Computer Science");
+
+    // Displaying details of the intern
+    intern.displayIntern();
 
 
     return 0;
