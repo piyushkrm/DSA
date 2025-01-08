@@ -197,6 +197,43 @@ class Phone {
 };
 
 
+// Inheritance
+class GrandParent {
+    public:
+    string name;
+    int age;
+
+    GrandParent(string name, int age) {
+        cout << "I am a GrandParent." << endl;
+        this->name = name;
+        this->age = age;
+    } 
+
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+
+};
+
+class Parent : public GrandParent {
+    public:
+    string occupation;
+
+    Parent(string name, int age, string occupation) : GrandParent(name, age) {
+        cout << "I am a Parent." << endl;
+        this->occupation = occupation;
+    } 
+
+    void display() {
+        GrandParent::display();
+        cout << "Occupation: " << occupation << endl;
+        cout << endl;
+    }
+};
+
+
+
 // Main function demonstrating the use of classes and objects
 int main() {
     cout << "This is OOPs lecture 54." << endl;
@@ -269,6 +306,15 @@ int main() {
 
     Phone phone1(phone);
     phone1.getDetails(); // This will display the phone's information using the copy constructor
+
+
+    // Inheritance
+    cout << "\nThis is OOPs lecture 55 Inheritance." << endl;
+    // GrandParent grandParent("John Doe", 70);
+
+    //Single level inherited
+    Parent parent("John Doe", 70, "Engineer");
+    parent.display(); // This will display both GrandParent and Parent's information.
 
 
     return 0;
