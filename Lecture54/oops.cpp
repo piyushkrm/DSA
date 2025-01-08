@@ -139,6 +139,64 @@ public:
     }
 };
 
+// This pointer
+class Animals {
+    public:
+        string color;
+        string type;
+        double price;
+        string gender;
+
+        Animals(string color, string type, double price, string gender) {
+            cout << "I am a constructor for Animals." << endl;
+            cout << "I am this pointer" << endl;
+            this->color = color;
+            this->type = type;
+            this->price = price;
+            this->gender = gender;
+        }
+
+        void getInfo() {
+            cout << "Color: " << color << endl;
+            cout << "Type: " << type << endl;
+            cout << "Price: " << price << endl;
+            cout << "Gender: " << gender << endl;
+        }
+};
+
+// Copy Constructor
+class Phone {
+    public:
+        string name;
+        string model;
+        double price;
+        int year;
+        string brand;
+
+
+        Phone() {
+            cout << "\nI am a constructor for Phone." << endl;
+        }
+
+        Phone(const Phone& phone) {
+            cout << "\nI am a Copy constructor for Phone." << endl;
+            name = phone.name;
+            model = phone.model;
+            price = phone.price;
+            year = phone.year;
+            brand = phone.brand;
+        }
+
+        void getDetails() {
+            cout << "Name: " << name << endl;
+            cout << "Model: " << model << endl;
+            cout << "Price: " << price << endl;
+            cout << "Year: " << year << endl;
+            cout << "Brand: " << brand << endl;
+        }
+};
+
+
 // Main function demonstrating the use of classes and objects
 int main() {
     cout << "This is OOPs lecture 54." << endl;
@@ -193,6 +251,24 @@ int main() {
     // Now the myCar object has been initialized with these values
     myCar.getInfo(); // This will display the car's information
 
+
+    // This pointer
+    cout << "\nThis is OOPs lecture 55 This pointer." << endl;
+    Animals animal("Black", "Cat", 150, "Male");
+    animal.getInfo();
+
+
+    // Copy constructor
+    Phone phone;
+    phone.name = "iPhone 13 Pro Max";
+    phone.model = "A2224";
+    phone.price = 120000;
+    phone.year = 2021;
+    phone.brand = "Apple";
+    phone.getDetails();
+
+    Phone phone1(phone);
+    phone1.getDetails(); // This will display the phone's information using the copy constructor
 
 
     return 0;
