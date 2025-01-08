@@ -216,6 +216,7 @@ class GrandParent {
 
 };
 
+// Single level inheritance
 class Parent : public GrandParent {
     public:
     string occupation;
@@ -228,6 +229,22 @@ class Parent : public GrandParent {
     void display() {
         GrandParent::display();
         cout << "Occupation: " << occupation << endl;
+    }
+};
+
+// Multilevel inheritance
+
+class Child : public Parent {
+    public:
+    string grade;
+    Child(string name, int age, string occupation, string grade) : Parent(name, age, occupation) {
+        cout << "I am a Child." << endl;
+        this->grade = grade;
+    }
+
+    void display() {
+        Parent::display();
+        cout << "Grade: " << grade << endl;
         cout << endl;
     }
 };
@@ -311,10 +328,15 @@ int main() {
     // Inheritance
     cout << "\nThis is OOPs lecture 55 Inheritance." << endl;
     // GrandParent grandParent("John Doe", 70);
+    // grandParent.display(); // This will display only GrandParent's information.
 
     //Single level inherited
-    Parent parent("John Doe", 70, "Engineer");
-    parent.display(); // This will display both GrandParent and Parent's information.
+    // Parent parent("John Doe", 70, "Engineer");
+    // parent.display(); // This will display both GrandParent and Parent's information.
+
+    // Multilevel inherited
+    Child child("John Doe", 70, "Engineer", "12th");
+    child.display(); // This will display Child's information.
 
 
     return 0;
