@@ -7,6 +7,7 @@
  */
 
 #include <iostream>
+#include <cmath>  // Make sure to include this for M_PI
 using namespace std;
 
 // Teacher class declaration
@@ -263,6 +264,84 @@ public:
 };
 
 
+// Hierarchy Inheritance
+ class Shape {
+public:
+    // Virtual method to calculate area (to be overridden in derived classes)
+    virtual void calculateArea() = 0; // Pure virtual function
+
+    // Virtual destructor
+    virtual ~Shape() {
+        cout << "Shape destructor called!" << endl;
+    }
+};
+
+// Derived class - Circle
+class Circle : public Shape {
+public:
+    double radius;
+
+    // Constructor for Circle
+    Circle(double radius) {
+        this->radius = radius;
+    }
+
+    // Override calculateArea for Circle
+    void calculateArea() override {
+        double area = M_PI * radius * radius;
+        cout << "Area of Circle: " << area << endl;
+    }
+
+    ~Circle() {
+        cout << "Circle destructor called!" << endl;
+    }
+};
+
+// Derived class - Rectangle
+class Rectangle : public Shape {
+public:
+    double length, width;
+
+    // Constructor for Rectangle
+    Rectangle(double length, double width) {
+        this->length = length;
+        this->width = width;
+    }
+
+    // Override calculateArea for Rectangle
+    void calculateArea() override {
+        double area = length * width;
+        cout << "Area of Rectangle: " << area << endl;
+    }
+
+    ~Rectangle() {
+        cout << "Rectangle destructor called!" << endl;
+    }
+};
+
+// Derived class - Triangle
+class Triangle : public Shape {
+public:
+    double base, height;
+
+    // Constructor for Triangle
+    Triangle(double base, double height) {
+        this->base = base;
+        this->height = height;
+    }
+
+    // Override calculateArea for Triangle
+    void calculateArea() override {
+        double area = 0.5 * base * height;
+        cout << "Area of Triangle: " << area << endl;
+    }
+
+    ~Triangle() {
+        cout << "Triangle destructor called!" << endl;
+    }
+};
+
+
 
 // Main function demonstrating the use of classes and objects
 int main() {
@@ -352,8 +431,28 @@ int main() {
     // child.display(); // This will display Child's information.
 
     // Multiple inheritance
-    GrandChild grandChild("John Doe", 70, "Engineer", "12th", "Reading");
-    grandChild.display(); // This will display GrandChild's, Parent's, and GrandParent's information.
+    // GrandChild grandChild("John Doe", 70, "Engineer", "12th", "Reading");
+    // grandChild.display(); // This will display GrandChild's, Parent's, and GrandParent's information.
+
+
+    // Hierarchy Inheritance
+    // Creating objects of derived classes
+    // Circle circle(5.0);  // Radius = 5
+    // Rectangle rectangle(4.0, 6.0);  // Length = 4, Width = 6
+    // Triangle triangle(4.0, 5.0);  // Base = 4, Height = 5
+
+    // // Polymorphic behavior: Call calculateArea on different shapes
+    // Shape* shapePtr;
+
+    // shapePtr = &circle;
+    // shapePtr->calculateArea();  // Calls Circle's calculateArea
+
+    // shapePtr = &rectangle;
+    // shapePtr->calculateArea();  // Calls Rectangle's calculateArea
+
+    // shapePtr = &triangle;
+    // shapePtr->calculateArea();  // Calls Triangle's calculateArea
+
 
 
     return 0;
