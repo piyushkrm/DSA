@@ -7,32 +7,36 @@
  */
 
 #include <iostream>
-#include <cmath>  // Make sure to include this for M_PI
+#include <cmath> // Make sure to include this for M_PI
 using namespace std;
 
 // Teacher class declaration
-class Teacher {
+class Teacher
+{
 private:
     string passKey; // Private password attribute
 
 public:
-    string name;        // Name of the teacher
-    string department;  // Department of the teacher
-    double salary;      // Salary of the teacher
-    int id;             // ID of the teacher
+    string name;       // Name of the teacher
+    string department; // Department of the teacher
+    double salary;     // Salary of the teacher
+    int id;            // ID of the teacher
 
     // Setter for passKey (Encapsulation)
-    void setPasskey(string key) {
+    void setPasskey(string key)
+    {
         passKey = key;
     }
 
     // Getter for passKey (Encapsulation)
-    string getPasskey() {
+    string getPasskey()
+    {
         return passKey;
     }
 
     // Method to display teacher information
-    void getInformation() {
+    void getInformation()
+    {
         cout << "Name: " << name << endl;
         cout << "Department: " << department << endl;
         cout << "Salary: " << salary << endl;
@@ -42,7 +46,8 @@ public:
 };
 
 // Encapsulation example in the Father class
-class Father {
+class Father
+{
 private:
     string name;
     string fatherName;
@@ -51,41 +56,50 @@ private:
 
 public:
     // Setter methods to set private data
-    void setName(string n) {
+    void setName(string n)
+    {
         name = n;
     }
 
-    void setFatherName(string fn) {
+    void setFatherName(string fn)
+    {
         fatherName = fn;
     }
 
-    void setMotherName(string mn) {
+    void setMotherName(string mn)
+    {
         motherName = mn;
     }
 
-    void setAge(int a) {
+    void setAge(int a)
+    {
         age = a;
     }
 
     // Getter methods to access private data
-    string getName() {
+    string getName()
+    {
         return name;
     }
 
-    string getFatherName() {
+    string getFatherName()
+    {
         return fatherName;
     }
 
-    string getMotherName() {
+    string getMotherName()
+    {
         return motherName;
     }
 
-    int getAge() {
+    int getAge()
+    {
         return age;
     }
 
     // Method to display information
-    void getInfo() {
+    void getInfo()
+    {
         cout << "Name: " << name << endl;
         cout << "Father's Name: " << fatherName << endl;
         cout << "Mother's Name: " << motherName << endl;
@@ -94,7 +108,8 @@ public:
 };
 
 // Constructor example with Car class
-class Car {
+class Car
+{
 private:
     double price; // Private price attribute
 
@@ -105,32 +120,37 @@ public:
     string color; // Car color
 
     // Constructor --> Non parameters constructor
-    Car() {
+    Car()
+    {
         cout << "I am a constructor for Car." << endl;
     }
 
     // Parameters constructor
-    Car(string n, string m, int y, string c, double p) {
+    Car(string n, string m, int y, string c, double p)
+    {
         cout << "\nI am a Parameters-constructor for Car." << endl;
         name = n;
         model = m;
         year = y;
-        color = c; 
+        color = c;
         price = p;
     }
 
     // Setter method for price
-    void setPrice(double p) {
+    void setPrice(double p)
+    {
         price = p;
     }
 
     // Getter method for price
-    double getPrice() {
+    double getPrice()
+    {
         return price;
     }
 
     // Method to display car information
-    void getInfo() {
+    void getInfo()
+    {
         cout << "Name: " << name << endl;
         cout << "Model: " << model << endl;
         cout << "Year: " << year << endl;
@@ -141,263 +161,303 @@ public:
 };
 
 // This pointer
-class Animals {
-    public:
-        string color;
-        string type;
-        double price;
-        string gender;
+class Animals
+{
+public:
+    string color;
+    string type;
+    double price;
+    string gender;
 
-        Animals(string color, string type, double price, string gender) {
-            cout << "I am a constructor for Animals." << endl;
-            cout << "I am this pointer" << endl;
-            this->color = color;
-            this->type = type;
-            this->price = price;
-            this->gender = gender;
-        }
+    Animals(string color, string type, double price, string gender)
+    {
+        cout << "I am a constructor for Animals." << endl;
+        cout << "I am this pointer" << endl;
+        this->color = color;
+        this->type = type;
+        this->price = price;
+        this->gender = gender;
+    }
 
-        void getInfo() {
-            cout << "Color: " << color << endl;
-            cout << "Type: " << type << endl;
-            cout << "Price: " << price << endl;
-            cout << "Gender: " << gender << endl;
-        }
+    void getInfo()
+    {
+        cout << "Color: " << color << endl;
+        cout << "Type: " << type << endl;
+        cout << "Price: " << price << endl;
+        cout << "Gender: " << gender << endl;
+    }
 };
 
 // Copy Constructor
-class Phone {
-    public:
-        string name;
-        string model;
-        double price;
-        int year;
-        string brand;
+class Phone
+{
+public:
+    string name;
+    string model;
+    double price;
+    int year;
+    string brand;
 
+    Phone()
+    {
+        cout << "\nI am a constructor for Phone." << endl;
+    }
 
-        Phone() {
-            cout << "\nI am a constructor for Phone." << endl;
-        }
+    Phone(const Phone &phone)
+    {
+        cout << "\nI am a Copy constructor for Phone." << endl;
+        name = phone.name;
+        model = phone.model;
+        price = phone.price;
+        year = phone.year;
+        brand = phone.brand;
+    }
 
-        Phone(const Phone& phone) {
-            cout << "\nI am a Copy constructor for Phone." << endl;
-            name = phone.name;
-            model = phone.model;
-            price = phone.price;
-            year = phone.year;
-            brand = phone.brand;
-        }
-
-        void getDetails() {
-            cout << "Name: " << name << endl;
-            cout << "Model: " << model << endl;
-            cout << "Price: " << price << endl;
-            cout << "Year: " << year << endl;
-            cout << "Brand: " << brand << endl;
-        }
+    void getDetails()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Model: " << model << endl;
+        cout << "Price: " << price << endl;
+        cout << "Year: " << year << endl;
+        cout << "Brand: " << brand << endl;
+    }
 };
 
-
 // Inheritance
-class GrandParent {
+class GrandParent
+{
 public:
     string name;
     int age;
 
-    GrandParent(string name, int age) {
+    GrandParent(string name, int age)
+    {
         cout << "I am a GrandParent." << endl;
         this->name = name;
         this->age = age;
     }
 
-    void display() {
+    void display()
+    {
         cout << "GrandParent - Name: " << name << endl;
         cout << "GrandParent - Age: " << age << endl;
     }
 };
 
-class Parent : public GrandParent {
+class Parent : public GrandParent
+{
 public:
     string occupation;
 
-    Parent(string name, int age, string occupation) : GrandParent(name, age) {
+    Parent(string name, int age, string occupation) : GrandParent(name, age)
+    {
         cout << "\nI am a Parent." << endl;
         this->occupation = occupation;
     }
 
-    void display() {
-        GrandParent::display();  // Call GrandParent's display method
+    void display()
+    {
+        GrandParent::display(); // Call GrandParent's display method
         cout << "Parent - Occupation: " << occupation << endl;
     }
 };
 
-class Child : public GrandParent {
+class Child : public GrandParent
+{
 public:
     string school;
 
-    Child(string name, int age, string school) : GrandParent(name, age) {
+    Child(string name, int age, string school) : GrandParent(name, age)
+    {
         cout << "\nI am a Child." << endl;
         this->school = school;
     }
 
-    void display() {
-        GrandParent::display();  // Call GrandParent's display method
+    void display()
+    {
+        GrandParent::display(); // Call GrandParent's display method
         cout << "Child - School: " << school << endl;
     }
 };
 
-class GrandChild : public Child, public Parent {
+class GrandChild : public Child, public Parent
+{
 public:
     string hobby;
 
-    GrandChild(string name, int age, string school, string occupation, string hobby) 
-    : Child(name, age, school), Parent(name, age, occupation) {
+    GrandChild(string name, int age, string school, string occupation, string hobby)
+        : Child(name, age, school), Parent(name, age, occupation)
+    {
         cout << "\nI am a GrandChild." << endl;
         this->hobby = hobby;
     }
 
-    void display() {
+    void display()
+    {
         // You need to specify which base class's display function to call
         Parent::display(); // Calls Parent's display method (and calls GrandParent display via Parent)
         cout << "GrandChild - Hobby: " << hobby << endl;
     }
 };
 
-
 // Hierarchy Inheritance
- class Shape {
+class Shape
+{
 public:
     // Virtual method to calculate area (to be overridden in derived classes)
     virtual void calculateArea() = 0; // Pure virtual function
 
     // Virtual destructor
-    virtual ~Shape() {
+    virtual ~Shape()
+    {
         cout << "Shape destructor called!" << endl;
     }
 };
 
 // Derived class - Circle
-class Circle : public Shape {
+class Circle : public Shape
+{
 public:
     double radius;
 
     // Constructor for Circle
-    Circle(double radius) {
+    Circle(double radius)
+    {
         this->radius = radius;
     }
 
     // Override calculateArea for Circle
-    void calculateArea() override {
+    void calculateArea() override
+    {
         double area = M_PI * radius * radius;
         cout << "Area of Circle: " << area << endl;
     }
 
-    ~Circle() {
+    ~Circle()
+    {
         cout << "Circle destructor called!" << endl;
     }
 };
 
 // Derived class - Rectangle
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 public:
     double length, width;
 
     // Constructor for Rectangle
-    Rectangle(double length, double width) {
+    Rectangle(double length, double width)
+    {
         this->length = length;
         this->width = width;
     }
 
     // Override calculateArea for Rectangle
-    void calculateArea() override {
+    void calculateArea() override
+    {
         double area = length * width;
         cout << "Area of Rectangle: " << area << endl;
     }
 
-    ~Rectangle() {
+    ~Rectangle()
+    {
         cout << "Rectangle destructor called!" << endl;
     }
 };
 
 // Derived class - Triangle
-class Triangle : public Shape {
+class Triangle : public Shape
+{
 public:
     double base, height;
 
     // Constructor for Triangle
-    Triangle(double base, double height) {
+    Triangle(double base, double height)
+    {
         this->base = base;
         this->height = height;
     }
 
     // Override calculateArea for Triangle
-    void calculateArea() override {
+    void calculateArea() override
+    {
         double area = 0.5 * base * height;
         cout << "Area of Triangle: " << area << endl;
     }
 
-    ~Triangle() {
+    ~Triangle()
+    {
         cout << "Triangle destructor called!" << endl;
     }
 };
 
-
 // Hybrid Inheritance
-class Person {
+class Person
+{
 public:
     string name;
     int age;
 
     // Constructor for Person
-    Person(string name, int age) {
+    Person(string name, int age)
+    {
         this->name = name;
         this->age = age;
     }
 
-    void displayPerson() {
+    void displayPerson()
+    {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
     }
 };
 
 // Derived class - Employee (Hierarchical Inheritance)
-class Employee : public Person {
+class Employee : public Person
+{
 public:
     string jobTitle;
 
     // Constructor for Employee
-    Employee(string name, int age, string jobTitle) : Person(name, age) {
+    Employee(string name, int age, string jobTitle) : Person(name, age)
+    {
         this->jobTitle = jobTitle;
     }
 
-    void displayEmployee() {
+    void displayEmployee()
+    {
         cout << "Job Title: " << jobTitle << endl;
     }
 };
 
 // Derived class - Student (Hierarchical Inheritance)
-class Student : public Person {
+class Student : public Person
+{
 public:
     string major;
 
     // Constructor for Student
-    Student(string name, int age, string major) : Person(name, age) {
+    Student(string name, int age, string major) : Person(name, age)
+    {
         this->major = major;
     }
 
-    void displayStudent() {
+    void displayStudent()
+    {
         cout << "Major: " << major << endl;
     }
 };
 
 // Derived class - Intern (Multiple Inheritance)
-class Intern : public Employee, public Student {
+class Intern : public Employee, public Student
+{
 public:
     // Constructor for Intern
     Intern(string name, int age, string jobTitle, string major)
         : Employee(name, age, jobTitle), Student(name, age, major) {}
 
-    void displayIntern() {
+    void displayIntern()
+    {
         // Explicitly call displayPerson from Person class using scope resolution
         Employee::displayPerson(); // Calls Person's displayPerson via Employee
         displayEmployee();
@@ -405,10 +465,9 @@ public:
     }
 };
 
-
-
 // Main function demonstrating the use of classes and objects
-int main() {
+int main()
+{
     cout << "This is OOPs lecture 54." << endl;
 
     // Create an object of the Teacher class and set values
@@ -437,8 +496,6 @@ int main() {
     // Display the father's information
     father.getInfo();
 
-
-
     // Demonstrating Constructor in the Car class
     cout << "\nThis is OOPs lecture 55 Constructor." << endl;
     Car car;
@@ -461,12 +518,10 @@ int main() {
     // Now the myCar object has been initialized with these values
     myCar.getInfo(); // This will display the car's information
 
-
     // This pointer
     cout << "\nThis is OOPs lecture 55 This pointer." << endl;
     Animals animal("Black", "Cat", 150, "Male");
     animal.getInfo();
-
 
     // Copy constructor
     Phone phone;
@@ -480,15 +535,14 @@ int main() {
     Phone phone1(phone);
     phone1.getDetails(); // This will display the phone's information using the copy constructor
 
-
     // Inheritance
     cout << "\nThis is OOPs lecture 55 Inheritance." << endl;
     // GrandParent grandParent("John Doe", 70);
     // grandParent.display(); // This will display only GrandParent's information.
 
-    //Single level inherited
-    // Parent parent("John Doe", 70, "Engineer");
-    // parent.display(); // This will display both GrandParent and Parent's information.
+    // Single level inherited
+    //  Parent parent("John Doe", 70, "Engineer");
+    //  parent.display(); // This will display both GrandParent and Parent's information.
 
     // Multilevel inherited
     // Child child("John Doe", 70, "Engineer", "12th");
@@ -497,7 +551,6 @@ int main() {
     // Multiple inheritance
     // GrandChild grandChild("John Doe", 70, "Engineer", "12th", "Reading");
     // grandChild.display(); // This will display GrandChild's, Parent's, and GrandParent's information.
-
 
     // Hierarchy Inheritance
     // Creating objects of derived classes
@@ -517,13 +570,11 @@ int main() {
     // shapePtr = &triangle;
     // shapePtr->calculateArea();  // Calls Triangle's calculateArea
 
-
     // Creating an Intern object (Hybrid Inheritance)
     Intern intern("John Doe", 22, "Software Developer", "Computer Science");
 
     // Displaying details of the intern
     intern.displayIntern();
-
 
     return 0;
 }
