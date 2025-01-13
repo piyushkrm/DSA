@@ -1,7 +1,3 @@
-
-
-// Linked List
-
 #include <iostream>
 
 using namespace std;
@@ -30,7 +26,8 @@ public:
         head = NULL;
         tail = NULL;
     }
-    // Insertion at the beginning of the linked list (push_front in LinkedList)
+
+    // Insertion at the beginning of the linked list
     void push_front(int val)
     {
         Node *newNode = new Node(val); // create a new node with given value
@@ -46,9 +43,9 @@ public:
         }
     }
 
-
-    // Insertion at the end of the linked list (push_back in LinkedList)
-    void push_back(int val) {
+    // Insertion at the end of the linked list
+    void push_back(int val)
+    {
         Node *newNode = new Node(val); // create a new node with given value
         if (tail == NULL)
         { // if list is empty
@@ -62,32 +59,41 @@ public:
         }
     }
 
-    // Deletion from the beginning of the linked list (pop_front in LinkedList)
-    void pop_front() {
-        if (head == NULL) {
+    // Deletion from the beginning of the linked list
+    void pop_front()
+    {
+        if (head == NULL)
+        {
             cout << "Empty list" << endl;
             return;
         }
         Node *temp = head;
         head = head->next;
-        temp->next = NULL;
+        if (head == NULL)
+        { // if list becomes empty
+            tail = NULL;
+        }
         delete temp;
     }
 
-    // Deletion from the end of the linked list (pop_back in LinkedList)
-    void pop_back() {
-        if (head == NULL) {
+    // Deletion from the end of the linked list
+    void pop_back()
+    {
+        if (head == NULL)
+        {
             cout << "Empty list" << endl;
             return;
         }
-        if (head->next == NULL) { // if only one node in the list
+        if (head->next == NULL)
+        { // if only one node in the list
             delete head;
             head = NULL;
             tail = NULL;
             return;
         }
         Node *temp = head;
-        while (temp->next->next!= NULL) {
+        while (temp->next->next != NULL)
+        {
             temp = temp->next;
         }
         delete temp->next;
@@ -95,9 +101,51 @@ public:
         tail = temp;
     }
 
+    // Insert node at the middle of the linked list
+    void insertAtMiddle(int val, int position)
+    {
+        if (position < 0)
+        {
+            cout << "Invalid position" << endl;
+            return;
+        }
+
+        if (position == 0)
+        {
+            push_front(val);
+            return;
+        }
+
+        Node *temp = head;
+        for (int i = 1; i < position && temp != NULL; i++)
+        {
+            temp = temp->next;
+        }
+
+        if (temp == NULL)
+        {
+            cout << "Position exceeds the size of the list." << endl;
+            return;
+        }
+
+        Node *newNode = new Node(val);
+        newNode->next = temp->next;
+        temp->next = newNode;
+
+        if (newNode->next == NULL)
+        {
+            tail = newNode; // Update tail if new node is added at the end
+        }
+    }
+
     // Print the list of nodes
     void printList()
     {
+        if (head == NULL)
+        {
+            cout << "List is empty." << endl;
+            return;
+        }
         Node *temp = head;
         while (temp != NULL)
         {
@@ -128,4 +176,10 @@ int main()
     ll.pop_back();
     cout << "After pop_back: ";
     ll.printList();
+
+    ll.insertAtMiddle(4, 2);
+    cout << "After insertAtMiddle: ";
+    ll.printList();
+
+    return 0;
 }
