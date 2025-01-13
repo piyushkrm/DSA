@@ -62,6 +62,17 @@ public:
         }
     }
 
+    // Deletion from the beginning of the linked list (pop_front in LinkedList)
+    void pop_front() {
+        if (head == NULL) {
+            cout << "Empty list" << endl;
+            return;
+        }
+        Node *temp = head;
+        head = head->next;
+        temp->next = NULL;
+        delete temp;
+    }
 
     // Print the list of nodes
     void printList()
@@ -87,5 +98,9 @@ int main()
     ll.push_back(5);
 
     cout << "Linked List: ";
+    ll.printList();
+
+    ll.pop_front();
+    cout << "After pop_front: ";
     ll.printList();
 }
