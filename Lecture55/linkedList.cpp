@@ -138,6 +138,24 @@ public:
         }
     }
 
+    //Search the node on the linkedlist
+    void Search(int key) {
+        Node *temp = head;
+        int index = 0;
+
+        while (temp!= NULL) {
+            if (temp->data == key) {
+                cout << "Node found at position: " << index << endl;
+                return;
+            }
+            temp = temp->next;
+            index++;
+        }
+
+        cout << "Node not found in the list." << endl;
+        
+    }
+
     // Print the list of nodes
     void printList()
     {
@@ -180,6 +198,10 @@ int main()
     ll.insertAtMiddle(4, 2);
     cout << "After insertAtMiddle: ";
     ll.printList();
+
+    ll.Search(5);
+    ll.Search(4);
+
 
     return 0;
 }
