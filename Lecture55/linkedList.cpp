@@ -74,6 +74,27 @@ public:
         delete temp;
     }
 
+    // Deletion from the end of the linked list (pop_back in LinkedList)
+    void pop_back() {
+        if (head == NULL) {
+            cout << "Empty list" << endl;
+            return;
+        }
+        if (head->next == NULL) { // if only one node in the list
+            delete head;
+            head = NULL;
+            tail = NULL;
+            return;
+        }
+        Node *temp = head;
+        while (temp->next->next!= NULL) {
+            temp = temp->next;
+        }
+        delete temp->next;
+        temp->next = NULL;
+        tail = temp;
+    }
+
     // Print the list of nodes
     void printList()
     {
@@ -102,5 +123,9 @@ int main()
 
     ll.pop_front();
     cout << "After pop_front: ";
+    ll.printList();
+
+    ll.pop_back();
+    cout << "After pop_back: ";
     ll.printList();
 }
