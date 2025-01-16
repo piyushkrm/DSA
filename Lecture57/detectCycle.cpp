@@ -18,6 +18,24 @@ class ListNode {
         }
 };
 
+class Solution {
+    public:
+        bool hasCycle(ListNode* head) {
+            ListNode* slow = head;
+            ListNode* fast = head;
+
+            while (fast != nullptr && fast->next != nullptr) {
+                slow = slow->next;
+                fast = fast->next->next;
+
+                if (slow == fast) {
+                    return true; // Cycle detected
+                }
+            }
+            return false; // No cycle detected
+        }
+};
+
 // Print the Node of the linked list
     void printList(ListNode* node) {
         while (node!=nullptr) {
@@ -41,8 +59,12 @@ int main() {
     third->next = fourth;
     fourth->next = fifth;
     fifth->next = third; // Creating a cycle here   
-    cout << "Linked List: ";
-    printList(head);
+    // cout << "Linked List: ";
+    // printList(head);
 
+    Solution solution;
+    bool hasCycle = solution.hasCycle(head);
+    cout << "Cycle in the linked list: " << (hasCycle? "Yes" : "No") << endl;
 
+    return 0;
 }
