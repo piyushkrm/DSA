@@ -40,7 +40,7 @@ int main() {
     second->next = third;
     third->next = fourth;
     fourth->next = fifth;
-    // fifth->next = third; // Creating a cycle here   
+    fifth->next = third; // Creating a cycle here   
     cout << "Linked List: ";
     printList(head);
 
